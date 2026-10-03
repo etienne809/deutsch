@@ -1,0 +1,1864 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Grand, danke! Learn German to A1</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400&family=Bricolage+Grotesque:opsz,wght@12..96,500..800&display=swap" rel="stylesheet">
+<style>
+:root{
+  --paper:#F2F5F1; --surface:#FFFFFF; --sunk:#E6ECE7; --ink:#15211C; --ink-2:#48574F; --ink-3:#74847C; --line:#D3DCD5;
+  --accent:#F4C430; --accent-soft:#FBEDB5; --accent-ink:#2B2200; --hl:#F4C430;
+  --der:#2257C5; --die:#C92A48; --das:#12855A; --pl:#66736C;
+  --ok:#137344; --ok-bg:#DFF3E7; --bad:#B3261E; --bad-bg:#FBE4E1; --almost:#8F5300; --almost-bg:#FFEFD1;
+  --m0:#7A4FCF; --m1:#D27400; --m2:#0B8797; --m3:#BF3589; --m4:#5A7A1C; --m5:#8A5A3B;
+  --r-l:22px; --r:14px; --r-s:10px;
+  --font-body:"Atkinson Hyperlegible","Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
+  --font-display:"Bricolage Grotesque","Avenir Next","Segoe UI",Roboto,Arial,sans-serif;
+  color-scheme:light;
+  box-sizing:border-box;
+  padding-top:env(safe-area-inset-top,0px);
+  padding-bottom:env(safe-area-inset-bottom,0px);
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --paper:#0F1512; --surface:#18211D; --sunk:#222D28; --ink:#E8EFEA; --ink-2:#A9BAB1; --ink-3:#7D8F86; --line:#2E3B35;
+    --accent:#F4C430; --accent-soft:#3B3212; --accent-ink:#2B2200; --hl:rgba(244,196,48,.38);
+    --der:#7FA7FF; --die:#FF7D92; --das:#4FD39B; --pl:#9AA9A1;
+    --ok:#5ED49A; --ok-bg:#15352A; --bad:#FF8A7E; --bad-bg:#3D1C19; --almost:#FFB74D; --almost-bg:#3A2A10;
+    --m0:#A98BFF; --m1:#FFA94D; --m2:#4CC9D9; --m3:#FF7FC8; --m4:#A6CF5A; --m5:#D1A07E;
+    color-scheme:dark;
+  }
+}
+:root[data-theme="dark"]{
+  --paper:#0F1512; --surface:#18211D; --sunk:#222D28; --ink:#E8EFEA; --ink-2:#A9BAB1; --ink-3:#7D8F86; --line:#2E3B35;
+  --accent:#F4C430; --accent-soft:#3B3212; --accent-ink:#2B2200; --hl:rgba(244,196,48,.38);
+  --der:#7FA7FF; --die:#FF7D92; --das:#4FD39B; --pl:#9AA9A1;
+  --ok:#5ED49A; --ok-bg:#15352A; --bad:#FF8A7E; --bad-bg:#3D1C19; --almost:#FFB74D; --almost-bg:#3A2A10;
+  --m0:#A98BFF; --m1:#FFA94D; --m2:#4CC9D9; --m3:#FF7FC8; --m4:#A6CF5A; --m5:#D1A07E;
+  color-scheme:dark;
+}
+*,*::before,*::after{box-sizing:border-box}
+html{height:100%;scroll-padding-top:env(safe-area-inset-top,0px);-webkit-text-size-adjust:100%}
+body{margin:0;min-height:100%;background:var(--paper);color:var(--ink);font-family:var(--font-body);font-size:17px;line-height:1.5;-webkit-tap-highlight-color:transparent}
+#main{max-width:38rem;margin:0 auto;padding:1.25rem 1.1rem 7.5rem}
+h1,h2,h3{font-family:var(--font-display);line-height:1.12;margin:0 0 .5rem;letter-spacing:-.01em;font-weight:750}
+h1{font-size:2.15rem;font-weight:800}
+h2{font-size:1.55rem;margin-top:1.75rem}
+h3{font-size:1.15rem;margin-top:1.25rem}
+p{margin:.45rem 0}
+a{color:inherit}
+button{font:inherit;color:inherit}
+.muted{color:var(--ink-2)}
+.small{font-size:.9rem}
+.lead{font-size:1.08rem;color:var(--ink-2);margin:.25rem 0 1rem}
+[hidden]{display:none!important}
+:focus-visible{outline:3px solid var(--accent);outline-offset:2px;border-radius:6px}
+mark.noun{background:linear-gradient(transparent 55%,var(--hl) 55% 92%,transparent 92%);color:inherit;padding:0 .08em}
+
+/* Buttons */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:.5rem;min-height:48px;padding:.65rem 1.15rem;border-radius:var(--r);border:2px solid var(--ink);background:transparent;font-weight:700;cursor:pointer;text-decoration:none;color:var(--ink);line-height:1.2;text-align:center}
+.btn.primary{background:var(--ink);color:var(--paper)}
+.btn.quiet{border-color:var(--line);background:var(--surface)}
+.btn.block{display:flex;width:100%}
+.btn svg{width:20px;height:20px;flex:none}
+.btn:active{transform:translateY(1px)}
+.linkish{background:none;border:0;padding:.5rem 0;color:var(--ink-2);text-decoration:underline;cursor:pointer}
+.stack{display:flex;flex-direction:column;gap:.6rem;margin:1.25rem 0}
+.row{display:flex;gap:.5rem;flex-wrap:wrap;align-items:center}
+
+/* Audio buttons */
+.say-grp{display:inline-flex;gap:.3rem;flex:none}
+.say{width:44px;height:44px;border-radius:50%;border:1.5px solid var(--line);background:var(--surface);display:inline-grid;place-items:center;cursor:pointer;padding:0;flex:none;font-size:19px;line-height:1}
+.say svg{width:20px;height:20px}
+.say:active{transform:scale(.93)}
+.say.mic.rec-on{background:var(--bad);border-color:var(--bad);color:var(--paper);animation:pulse 1.1s ease-in-out infinite}
+@keyframes pulse{50%{box-shadow:0 0 0 7px color-mix(in srgb,var(--bad) 25%,transparent)}}
+
+/* Tabs */
+#tabs{position:fixed;left:0;right:0;bottom:0;z-index:20;background:var(--surface);border-top:1px solid var(--line);padding-bottom:env(safe-area-inset-bottom,0px)}
+#tabs .inner{max-width:38rem;margin:0 auto;display:grid;grid-template-columns:repeat(3,1fr)}
+#tabs a{display:flex;flex-direction:column;align-items:center;gap:3px;padding:.5rem 0 .45rem;color:var(--ink-3);text-decoration:none;font-size:.8rem;font-weight:700}
+#tabs .ico{display:grid;place-items:center;width:56px;height:30px;border-radius:999px}
+#tabs svg{width:23px;height:23px}
+#tabs a.on{color:var(--ink)}
+#tabs a.on .ico{background:var(--accent);color:var(--accent-ink)}
+body.no-tabs #tabs{display:none}
+
+/* Toast */
+#toast{position:fixed;left:0;right:0;bottom:calc(86px + env(safe-area-inset-bottom,0px));z-index:40;display:flex;justify-content:center;padding:0 1rem;pointer-events:none;opacity:0;transform:translateY(8px);transition:opacity .18s,transform .18s}
+#toast.on{opacity:1;transform:none}
+.toast-in{pointer-events:auto;max-width:34rem;width:100%;background:var(--ink);color:var(--paper);border-radius:16px;padding:.85rem 3rem .85rem 1rem;position:relative;box-shadow:0 8px 28px rgba(0,0,0,.28)}
+.toast-in.ok{border-left:6px solid var(--ok)} .toast-in.almost{border-left:6px solid var(--almost)} .toast-in.bad{border-left:6px solid var(--bad)}
+.toast-x{position:absolute;top:.35rem;right:.35rem;width:40px;height:40px;border:0;background:transparent;color:inherit;font-size:1.4rem;cursor:pointer;border-radius:50%}
+.toast-in .say{border-color:transparent;background:color-mix(in srgb,var(--paper) 16%,transparent);color:inherit;width:38px;height:38px;margin-top:.35rem}
+
+/* Home */
+.brand{font-family:var(--font-display);font-weight:800;font-size:1rem;margin:0 0 .75rem;display:inline-block;background:var(--accent);color:var(--accent-ink);padding:.15rem .6rem;border-radius:8px;transform:rotate(-1.5deg)}
+.hello{font-size:clamp(2.4rem,11vw,3.2rem);letter-spacing:-.025em;margin:0}
+.home-sub{color:var(--ink-2);margin:.35rem 0 0}
+.cont{display:grid;grid-template-columns:auto 1fr;gap:.35rem 1rem;align-items:center;background:var(--accent);color:var(--accent-ink);border-radius:var(--r-l);padding:1.1rem;text-decoration:none;margin:1.4rem 0 1rem}
+.cont .big{font-family:var(--font-display);font-weight:800;font-size:4.2rem;line-height:.78;letter-spacing:-.04em;align-self:start}
+.cont h2{margin:0;font-size:1.5rem}
+.cont .sub{font-size:.95rem}
+.cont .go{grid-column:1/-1;margin-top:.6rem;background:var(--accent-ink);color:var(--accent);border-radius:12px;text-align:center;padding:.8rem;font-weight:700}
+.summary{color:var(--ink-2)}
+.summary a{font-weight:700;color:var(--ink)}
+.name-f{border:2px solid var(--ink);border-radius:var(--r-l);padding:1rem;margin:1.25rem 0 0;background:var(--surface)}
+.name-f label{font-weight:700;display:block;margin-bottom:.5rem}
+.name-row{display:flex;align-items:center;gap:.5rem;flex-wrap:wrap}
+.name-row span{font-family:var(--font-display);font-weight:750;font-size:1.2rem}
+.name-row .txt-in{flex:1;min-width:8rem}
+.back-banner{border:2px dashed var(--ink);border-radius:var(--r-l);padding:1rem;margin:1.25rem 0 0}
+.back-banner h2{margin:0 0 .25rem;font-size:1.35rem}
+.all-done{border:2px solid var(--ink);border-radius:var(--r-l);padding:1.1rem;margin:1.4rem 0 1rem;background:var(--surface)}
+.all-done h2{margin-top:0}
+
+/* Path */
+.path{list-style:none;margin:.5rem 0 0;padding:0;position:relative}
+.path::before{content:"";position:absolute;left:21px;top:26px;bottom:26px;width:2px;background:var(--line)}
+.pi{display:grid;grid-template-columns:44px 1fr auto;gap:.9rem;align-items:center;padding:.55rem 0;color:inherit;text-decoration:none}
+.node{width:44px;height:44px;border-radius:50%;display:grid;place-items:center;font-family:var(--font-display);font-weight:800;font-size:1.1rem;background:var(--paper);border:2px solid var(--ink);position:relative;z-index:1}
+.node svg{width:22px;height:22px}
+.node.done{background:var(--ink);color:var(--paper)}
+.node.prog{border:0;background:radial-gradient(closest-side,var(--paper) 80%,transparent 82% 100%),conic-gradient(var(--ink) calc(var(--p)*1%),var(--line) 0)}
+.node.soon{border-style:dashed;border-color:var(--ink-3);color:var(--ink-3)}
+.pi-t b{display:block;font-family:var(--font-display);font-size:1.12rem;line-height:1.2}
+.pi-t span{display:block;color:var(--ink-2);font-size:.92rem;line-height:1.3}
+.pi-s{font-size:.82rem;color:var(--ink-2);text-align:right;white-space:nowrap}
+li.soon .pi-t b{color:var(--ink-2)}
+
+/* Lesson header + footer */
+.ltop{position:sticky;top:env(safe-area-inset-top,0px);z-index:15;background:var(--paper);margin:-1.25rem -1.1rem 1rem;padding:.7rem 1.1rem .7rem;border-bottom:1px solid var(--line)}
+.ltop-row{display:flex;align-items:center;gap:.6rem}
+.back{width:44px;height:44px;display:grid;place-items:center;border-radius:50%;flex:none;color:var(--ink)}
+.back svg{width:24px;height:24px}
+.ltitle{display:flex;align-items:center;gap:.6rem;min-width:0}
+.lnum{font-family:var(--font-display);font-weight:800;font-size:2rem;line-height:1;letter-spacing:-.04em}
+.ltitle h1{font-size:1.3rem;margin:0;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.ltitle p{margin:0;font-size:.85rem;color:var(--ink-2);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.steps{display:grid;grid-template-columns:repeat(5,1fr);gap:4px;margin-top:.6rem}
+.steps a{font-size:.75rem;text-align:center;padding:.5rem 0;border-radius:9px;background:var(--sunk);color:var(--ink-2);text-decoration:none;font-weight:700;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.steps a.done{box-shadow:inset 0 -4px 0 var(--accent);color:var(--ink)}
+.steps a.cur{background:var(--ink);color:var(--paper)}
+.sfoot{position:fixed;left:0;right:0;bottom:0;z-index:20;background:var(--paper);border-top:1px solid var(--line);padding:.7rem 1.1rem calc(.7rem + env(safe-area-inset-bottom,0px))}
+.sfoot .inner{max-width:38rem;margin:0 auto}
+
+/* Boards */
+.board{display:grid;grid-template-columns:repeat(auto-fill,minmax(62px,1fr));gap:6px;margin:.75rem 0 .5rem}
+.board.nums{grid-template-columns:repeat(auto-fill,minmax(76px,1fr))}
+.tile{aspect-ratio:1/1;border:1.5px solid var(--line);background:var(--surface);border-radius:12px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:2px;cursor:pointer;padding:.2rem}
+.tile b{font-family:var(--font-display);font-size:1.55rem;line-height:1;font-weight:750}
+.tile small{font-size:.7rem;color:var(--ink-2);line-height:1.1;text-align:center;overflow-wrap:anywhere}
+.tile.extra{border-color:var(--accent);background:var(--accent-soft)}
+.tile:active{transform:scale(.95)}
+.numtry{border:2px dashed var(--line);border-radius:var(--r-l);padding:1rem;margin:1rem 0 .5rem}
+.numtry-n{font-family:var(--font-display);font-weight:800;font-size:3rem;line-height:1;min-width:3ch}
+.numtry-w{font-family:var(--font-display);font-size:1.35rem;font-weight:700;margin:.5rem 0 0}
+
+/* Words */
+.words{list-style:none;padding:0;margin:.5rem 0 0;background:var(--surface);border-radius:var(--r-l);border:1px solid var(--line);overflow:hidden}
+.word{display:flex;align-items:center;gap:.5rem;padding:.75rem .7rem .75rem 1rem;border-top:1px solid var(--line);position:relative}
+.word:first-child{border-top:0}
+.word::before{content:"";position:absolute;left:0;top:.75rem;bottom:.75rem;width:5px;border-radius:0 5px 5px 0;background:var(--g,transparent)}
+.g-der{--g:var(--der)} .g-die{--g:var(--die)} .g-das{--g:var(--das)}
+.w-main{flex:1;min-width:0}
+.w-de{background:none;border:0;padding:0;cursor:pointer;font-family:var(--font-display);font-size:1.22rem;font-weight:750;text-align:left;line-height:1.25}
+.art{color:var(--g)}
+.w-pl{background:none;border:0;padding:0;cursor:pointer;font-size:.9rem;color:var(--pl);text-align:left}
+.w-pl i{font-style:normal;font-size:.78rem;margin-right:.25rem}
+.w-en{color:var(--ink-2);font-size:.95rem;line-height:1.35}
+.w-note{font-size:.84rem;background:var(--accent-soft);padding:.1rem .45rem;border-radius:6px;display:inline-block;margin-top:.3rem;line-height:1.35}
+.legend{display:flex;gap:.9rem;font-size:.88rem;margin:.25rem 0 .5rem;font-weight:700}
+.legend span{color:var(--g)}
+.legend span::before{content:"";display:inline-block;width:10px;height:10px;border-radius:3px;background:var(--g);margin-right:.35rem;vertical-align:0}
+
+/* False friend */
+.ff{border:2px solid var(--ink);border-radius:var(--r-l);padding:1rem;background:var(--surface);margin:1.5rem 0 0}
+.ff-tag{display:inline-block;background:var(--ink);color:var(--paper);font-weight:700;font-size:.82rem;padding:.12rem .6rem;border-radius:999px;margin-bottom:.5rem}
+.ff-w{display:flex;align-items:center;justify-content:space-between;gap:.5rem}
+.ff-w b{font-family:var(--font-display);font-size:1.5rem}
+.ff .trap{color:var(--ink-2)}
+.ff .ex{border-left:3px solid var(--accent);padding-left:.7rem;margin-top:.6rem}
+.ffs{display:flex;flex-direction:column;gap:.75rem}
+.ffs .ff{margin:0}
+.ff-src{font-size:.8rem;color:var(--ink-3)}
+
+/* Grammar */
+.prose p{margin:.55rem 0}
+.prose ul{padding-left:1.2rem;margin:.4rem 0}
+.prose li{margin:.25rem 0}
+.gs{font-weight:700}
+.gs.der{color:var(--der)} .gs.die{color:var(--die)} .gs.das{color:var(--das)}
+.tbl-wrap{overflow-x:auto;margin:1rem 0;border:1px solid var(--line);border-radius:var(--r);background:var(--surface)}
+table{border-collapse:collapse;width:100%;font-size:.98rem}
+th,td{padding:.35rem .6rem;text-align:left;border-top:1px solid var(--line);white-space:nowrap}
+thead th{border-top:0;font-family:var(--font-display);font-size:.95rem;background:var(--sunk)}
+tbody th{font-weight:700;color:var(--ink-2)}
+tbody th small{display:block;font-weight:400;font-size:.75rem;color:var(--ink-3)}
+td button{background:none;border:0;padding:.3rem 0;cursor:pointer;font-weight:700;text-align:left;border-bottom:1px dotted var(--ink-3)}
+.ex{list-style:none;padding:0;margin:.5rem 0 0}
+.ex li{display:flex;align-items:center;gap:.6rem;padding:.65rem 0;border-top:1px solid var(--line)}
+.ex li:first-child{border-top:0}
+.ex li>div{flex:1;min-width:0}
+.ex-de{font-size:1.12rem;font-weight:700;margin:0;line-height:1.35}
+.ex-en{margin:0;color:var(--ink-2);font-size:.93rem}
+.tip{background:var(--accent-soft);border-radius:var(--r);padding:.8rem 1rem;margin:1.25rem 0 0}
+.tip b:first-child{margin-right:.3rem}
+
+/* Tasks */
+.task{background:var(--surface);border:1px solid var(--line);border-radius:var(--r-l);padding:1rem 1rem 1.1rem;margin:0 0 1rem}
+.task-h{display:flex;gap:.6rem;align-items:baseline;margin-bottom:.5rem}
+.task-h h3{margin:0;font-size:1.1rem}
+.task-n{font-family:var(--font-display);font-weight:800;font-size:1.3rem;color:var(--ink-3);min-width:1ch}
+.gap-line{display:block;padding:.6rem 0;font-size:1.1rem;border-top:1px dashed var(--line);line-height:1.9}
+.gap-line:first-of-type{border-top:0}
+.gap-in{font:inherit;font-weight:700;border:0;border-bottom:2px solid var(--ink);background:var(--sunk);border-radius:6px 6px 0 0;padding:.05rem .4rem;width:calc(var(--w,5) * 0.72em + 1.4rem);max-width:100%;color:var(--ink);font-size:1.05rem}
+.gap-en{display:block;font-size:.85rem;color:var(--ink-3);line-height:1.3}
+.txt-in{width:100%;font:inherit;font-size:1.05rem;padding:.65rem .75rem;border:2px solid var(--line);border-radius:12px;background:var(--paper);color:var(--ink)}
+.txt-in:focus,.gap-in:focus{outline:none;border-color:var(--ink)}
+.in-ok{border-color:var(--ok)!important;background:var(--ok-bg)!important}
+.in-bad{border-color:var(--bad)!important;background:var(--bad-bg)!important}
+.in-almost{border-color:var(--almost)!important;background:var(--almost-bg)!important}
+.in-shown{border-color:var(--ink-3)!important;border-style:dashed!important}
+.tr-item,.dict-item{padding:.7rem 0;border-top:1px dashed var(--line)}
+.tr-item:first-of-type,.dict-item:first-of-type{border-top:0}
+.tr-prompt{font-weight:700;margin:0 0 .4rem}
+.dict-top{display:flex;align-items:center;gap:.5rem;margin-bottom:.45rem}
+.dict-n{font-family:var(--font-display);font-weight:800;color:var(--ink-3);width:1.4rem}
+.sol{margin:.45rem 0 0;padding:.4rem .7rem;border-radius:10px;background:var(--ok-bg);color:var(--ink);display:flex;align-items:center;gap:.5rem;flex-wrap:wrap}
+.sol b{font-weight:700}
+.sol .say{width:36px;height:36px}
+.explain{display:block;font-size:.88rem;color:var(--ink-2);background:var(--accent-soft);padding:.3rem .55rem;border-radius:8px;margin-top:.35rem;line-height:1.4}
+.mc-item{padding:.6rem 0;border-top:1px dashed var(--line)}
+.mc-item:first-of-type{border-top:0}
+.mc-q{font-weight:700;margin:0 0 .35rem}
+.opts{display:flex;flex-wrap:wrap;gap:.4rem}
+.opt{border:2px solid var(--line);background:var(--paper);border-radius:12px;padding:.5rem .8rem;min-height:44px;cursor:pointer;font-weight:700;text-align:left;line-height:1.3}
+.opt[aria-pressed="true"]{border-color:var(--ink);background:var(--sunk)}
+.opt.ok{border-color:var(--ok);background:var(--ok-bg)}
+.opt.bad{border-color:var(--bad);background:var(--bad-bg)}
+.task-fb{min-height:1.3em;margin:.7rem 0 .5rem;font-weight:700}
+.task-fb.ok{color:var(--ok)} .task-fb.bad{color:var(--bad)} .task-fb.almost{color:var(--almost)} .task-fb.info{color:var(--ink-2)}
+.task-act{display:flex;gap:.5rem;flex-wrap:wrap}
+.task-act .btn{flex:1;min-width:7.5rem;padding-inline:.7rem}
+.uml{display:flex;gap:.35rem;margin:.6rem 0 0;align-items:center}
+.uml span{font-size:.8rem;color:var(--ink-3);margin-right:.2rem}
+.uml button{min-width:44px;min-height:40px;border-radius:10px;border:1.5px solid var(--line);background:var(--paper);font-weight:700;font-size:1.05rem;cursor:pointer}
+/* Match */
+.match{display:grid;grid-template-columns:1fr 1fr;gap:.5rem}
+.match .col{display:flex;flex-direction:column;gap:.5rem}
+.mi{position:relative;border:2px solid var(--line);background:var(--paper);border-radius:12px;padding:.55rem .65rem;min-height:48px;text-align:left;cursor:pointer;font-weight:700;line-height:1.25}
+.mi.sel{border-color:var(--ink);background:var(--accent-soft)}
+.mi.paired{border-color:var(--pc);background:color-mix(in srgb,var(--pc) 13%,var(--paper))}
+.mi .pb{position:absolute;top:-9px;right:-5px;background:var(--pc);color:var(--paper);border-radius:999px;font-size:.72rem;padding:.05rem .45rem;font-weight:700}
+.mi.ok{border-color:var(--ok);background:var(--ok-bg)}
+.mi.bad{border-color:var(--bad);background:var(--bad-bg)}
+.mi.ok .pb{background:var(--ok)} .mi.bad .pb{background:var(--bad)}
+
+/* Listening */
+.player{display:flex;gap:.5rem;flex-wrap:wrap;margin:0 0 1rem}
+.player .btn{flex:1;min-width:7rem}
+.dlg{margin:.75rem 0 0;background:var(--surface);border:1px solid var(--line);border-radius:var(--r-l);padding:.3rem .9rem}
+.dl{display:grid;grid-template-columns:4.2rem 1fr auto;gap:.5rem;align-items:center;padding:.6rem 0;border-top:1px solid var(--line)}
+.dl:first-child{border-top:0}
+.dl p{margin:0}
+.dl .de{font-weight:700;line-height:1.35}
+.who{font-family:var(--font-display);font-weight:750;font-size:.95rem}
+.who-A{color:var(--m2)} .who-B{color:var(--m1)}
+.dl.speaking{background:var(--accent-soft);margin:0 -.9rem;padding-left:.9rem;padding-right:.9rem}
+
+/* Sound */
+.snd-head{display:flex;align-items:flex-end;gap:1rem;margin:0 0 .5rem}
+.glyph{font-family:var(--font-display);font-weight:800;font-size:clamp(5.5rem,28vw,8rem);line-height:.85;letter-spacing:-.04em;background:linear-gradient(transparent 58%,var(--hl) 58% 90%,transparent 90%);padding:0 .08em}
+.snd-head h2{margin:0 0 .3rem;font-size:1.45rem}
+.howto{padding-left:1.2rem;margin:.5rem 0}
+.howto li{margin:.4rem 0}
+.snd-note{display:inline-block;font-size:.78rem;border:1px solid var(--line);border-radius:999px;padding:0 .45rem;margin-left:.25rem;color:var(--ink-2)}
+.pairs{display:flex;flex-direction:column;gap:.5rem;margin:.5rem 0}
+.pair{display:flex;align-items:center;gap:.6rem}
+.pw{flex:1;border:2px solid var(--line);background:var(--surface);border-radius:12px;padding:.6rem;font-family:var(--font-display);font-size:1.2rem;font-weight:750;cursor:pointer;min-height:48px;display:flex;align-items:center;justify-content:center;gap:.4rem}
+.pw svg{width:16px;height:16px;opacity:.6}
+.twister{margin:1.5rem 0 0;border:2px dashed var(--ink);border-radius:var(--r-l);padding:1rem}
+.twister h3{margin-top:0}
+.tw-de{font-size:1.2rem;font-weight:700;line-height:1.4}
+
+/* Done */
+.done-k{font-family:var(--font-display);font-weight:800;font-size:clamp(3rem,15vw,4.5rem);line-height:.9;letter-spacing:-.03em;margin:1.5rem 0 .75rem;display:inline-block;background:linear-gradient(transparent 55%,var(--hl) 55% 92%,transparent 92%)}
+
+/* Word box */
+.boxes{display:grid;grid-template-columns:repeat(5,1fr);gap:.45rem;align-items:end;height:150px;margin:1.25rem 0 .3rem}
+.bx{display:flex;flex-direction:column;justify-content:flex-end;align-items:center;height:100%;gap:.25rem}
+.bx b{font-family:var(--font-display);font-size:1.15rem}
+.bx .bar{width:100%;background:var(--ink);border-radius:8px 8px 3px 3px;min-height:6px}
+.bx:first-child .bar{background:var(--accent)}
+.bx-labs{display:grid;grid-template-columns:repeat(5,1fr);gap:.45rem;font-size:.74rem;color:var(--ink-2);text-align:center;line-height:1.25}
+.bx-labs b{display:block;color:var(--ink);font-size:.8rem}
+.sess-top{display:flex;align-items:center;gap:.75rem}
+.sess-bar{flex:1;height:8px;background:var(--sunk);border-radius:99px;overflow:hidden}
+.sess-bar i{display:block;height:100%;background:var(--accent);border-radius:99px}
+.fcard{background:var(--surface);border:2px solid var(--ink);border-radius:var(--r-l);padding:1.3rem 1.15rem;margin:1rem 0}
+.fc-meta{font-size:.82rem;color:var(--ink-3);margin:0 0 .4rem}
+.fc-prompt{font-family:var(--font-display);font-size:1.75rem;font-weight:750;line-height:1.15;margin:0 0 .35rem}
+.fc-hint{color:var(--ink-2);font-size:.92rem;margin:0 0 .9rem}
+.fc-ans{display:flex;align-items:center;gap:.6rem;flex-wrap:wrap;margin:.6rem 0 0}
+.fc-ans b{font-family:var(--font-display);font-size:1.6rem;font-weight:750}
+.fc-fb{font-weight:700;margin:.8rem 0 0}
+.fc-fb.ok{color:var(--ok)} .fc-fb.bad{color:var(--bad)} .fc-fb.almost{color:var(--almost)}
+
+/* Extras */
+.set{background:var(--surface);border:1px solid var(--line);border-radius:var(--r-l);padding:1rem;margin:.75rem 0}
+.set label{display:block;font-weight:700;margin:0 0 .35rem}
+.set select.txt-in{appearance:auto}
+.set + .set{margin-top:.75rem}
+.set input[type=range]{width:100%;accent-color:var(--ink)}
+.danger{border-color:var(--bad)!important;color:var(--bad)!important}
+
+@media (prefers-reduced-motion: reduce){*,*::before,*::after{animation:none!important;transition:none!important}}
+@media (min-width:600px){ #main{padding-top:2rem} .ltop{margin-top:-2rem} }
+</style>
+</head>
+<body>
+<main id="main" tabindex="-1"></main>
+<nav id="tabs" aria-label="Sections"><div class="inner">
+  <a href="#/" data-tab="home"><span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 19.5V5a2 2 0 0 1 2-2h13v15H6a2 2 0 0 0-2 2z"/><path d="M4 19.5A2 2 0 0 0 6 21h13"/><path d="M9 7.5h6"/></svg></span>Lessons</a>
+  <a href="#/cards" data-tab="cards"><span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="8" width="18" height="12" rx="2"/><path d="M6 8V5h12v3"/><path d="M9 13h6"/></svg></span>Word box</a>
+  <a href="#/more" data-tab="more"><span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="5" cy="12" r="1.3"/><circle cx="12" cy="12" r="1.3"/><circle cx="19" cy="12" r="1.3"/></svg></span>More</a>
+</div></nav>
+<div id="toast" role="status" aria-live="polite"></div>
+<script>
+/* =====================================================================
+   LESSON DATA
+   ---------------------------------------------------------------------
+   Every lesson is one plain object in LESSONS. To add a lesson: copy a
+   finished lesson, give it the next id/n, delete `soon: true` from the
+   placeholder, and fill in the parts below. Nothing else needs changing.
+
+   vocab (8–12):   { de, art?, pl?, en, note?, cue?, say?, alt? }
+                   art  "der" | "die" | "das" for nouns (shown in colour)
+                   pl   full plural with article ("die Tische")
+                   cue  English prompt in the word box if `en` is vague
+                   say  what the speaker reads, if it differs from `de`
+                   alt  extra answers the word box accepts
+   board:          optional "alphabet" | "numbers" (tap-to-hear grid)
+   grammar:        { title, html, table?, examples:[{ de, en }], tip? }
+                   table { head:[…], rows:[[…]], gloss?:[…],
+                           sayCols:[col indexes], prefixRow?:bool }
+                   In examples, *asterisks* highlight a word.
+   exercises (4–6): { type, instruction, … }
+                   gap        items:[{ text:"Ich ___ müde.", answers:["bin"], en?, explain? }]
+                   match      pairs:[["der Vater","father"], …]
+                   mc         items:[{ q, options:[…], answer:<index>, explain? }]
+                   translate  items:[{ prompt, answers:[…] }]
+   listening:      { mode:"dictation", instruction,
+                     items:[{ say, answers, show?, en?, hint?, compact? }] }
+                   { mode:"dialog", instruction,
+                     lines:[{ who:"A"|"B", name, de, en }], questions:[mc items] }
+                   compact: spaces are ignored when checking (numbers)
+   pronunciation:  { sound, title, intro, howTo:[…], examples:[{ de, en, note? }],
+                     pairsLabel?, pairs?:[[a,b]], tip?, twister:{ de, en } }
+   falseFriend:    id of an entry in FALSE_FRIENDS
+
+   Checking is tolerant: capitals, punctuation and ae/oe/ue/ss for
+   ä/ö/ü/ß never count as mistakes.
+   ===================================================================== */
+
+const LESSONS = [
+/* ------------------------------------------------------------------ 1 */
+{
+  id: "l1", n: 1,
+  title: "Das Alphabet",
+  en: "The alphabet and your first words",
+  intro: "Willkommen! German is spelt almost exactly the way it sounds, so once you know the letters you can read nearly any word out loud. Tap a letter to hear it.",
+  board: "alphabet",
+  vocab: [
+    { de: "Alphabet", art: "das", pl: "die Alphabete", en: "alphabet" },
+    { de: "Buchstabe", art: "der", pl: "die Buchstaben", en: "letter (of the alphabet)", note: "A letter you post is der Brief." },
+    { de: "Wort", art: "das", pl: "die Wörter", en: "word" },
+    { de: "Name", art: "der", pl: "die Namen", en: "name" },
+    { de: "Frage", art: "die", pl: "die Fragen", en: "question" },
+    { de: "Antwort", art: "die", pl: "die Antworten", en: "answer" },
+    { de: "ja", en: "yes" },
+    { de: "nein", en: "no" },
+    { de: "bitte", en: "please; you're welcome" },
+    { de: "danke", en: "thanks", alt: ["danke schön", "dankeschön", "vielen Dank"] },
+    { de: "Wie bitte?", en: "Sorry? / Pardon?", cue: "Sorry? (you didn't catch what someone said)" },
+    { de: "buchstabieren", en: "to spell" }
+  ],
+  grammar: {
+    title: "Every noun starts with a capital letter",
+    html: `<p>In English only names get a capital letter. In German, <b>every noun</b> does: not just <i>Anna</i> and <i>Galway</i>, but also everyday things like <i>das Wort</i>, <i>die Frage</i>, <i>der Tee</i>.</p>
+<p>This is a real help when you read: the capitalised words in the middle of a sentence are the things. Verbs, adjectives and small words like <i>ja</i>, <i>bitte</i> and <i>und</i> stay lowercase, except at the very start of a sentence.</p>`,
+    examples: [
+      { de: "Das ist ein *Wort*.", en: "That is a word." },
+      { de: "Mein *Name* ist *Anna*.", en: "My name is Anna." },
+      { de: "Die *Antwort* ist ja.", en: "The answer is yes." },
+      { de: "*Galway* ist eine *Stadt* in *Irland*.", en: "Galway is a city in Ireland." }
+    ],
+    tip: `<b>Tip:</b> the word for <i>I</i> is the other way round. English writes "I" with a capital, German writes <i>ich</i> in lowercase, unless it starts the sentence: <i>Ja, ich komme.</i>`
+  },
+  exercises: [
+    { type: "mc", instruction: "Which spelling is correct?", items: [
+      { q: "the word", options: ["das wort", "das Wort", "Das wort"], answer: 1 },
+      { q: "the question and the answer", options: ["die frage und die antwort", "die Frage und die Antwort", "Die Frage Und Die Antwort"], answer: 1 },
+      { q: "Yes, please. (a whole sentence)", options: ["Ja, Bitte.", "ja, bitte.", "Ja, bitte."], answer: 2, explain: "Capital J because it starts the sentence. bitte isn't a noun, so it stays lowercase." }
+    ]},
+    { type: "match", instruction: "Match the German to the English.", pairs: [
+      ["ja", "yes"], ["nein", "no"], ["bitte", "please"], ["danke", "thanks"], ["Wie bitte?", "Sorry? (didn't catch it)"], ["buchstabieren", "to spell"]
+    ]},
+    { type: "gap", instruction: "Fill in the missing word.", items: [
+      { text: "Das Alphabet hat 26 ___, plus ä, ö, ü und ß.", answers: ["Buchstaben"], en: "The alphabet has 26 letters, plus ä, ö, ü and ß." },
+      { text: "Mein ___ ist Aoife.", answers: ["Name"], en: "My name is Aoife." },
+      { text: "Das ist eine Frage. Und das ist die ___.", answers: ["Antwort"], en: "That is a question. And that is the answer." },
+      { text: "„Hallo“ ist ein ___.", answers: ["Wort"], en: "“Hallo” is a word." }
+    ]},
+    { type: "mc", instruction: "How do these letters sound in German?", items: [
+      { q: "W, as in Wort", options: ["like English w", "like English v", "like English f"], answer: 1 },
+      { q: "J, as in ja", options: ["like j in jam", "like y in yes", "like h in hat"], answer: 1 },
+      { q: "Z, as in zehn", options: ["like z in zoo", "like ts in cats", "like s in sun"], answer: 1 },
+      { q: "V, as in vier", options: ["like English v", "like English f", "like English w"], answer: 1, explain: "In most German words v sounds like f: vier, Vater, viel. In some borrowed words like Video it's a v." }
+    ]},
+    { type: "translate", instruction: "Write it in German.", items: [
+      { prompt: "yes", answers: ["ja"] },
+      { prompt: "thank you", answers: ["danke", "danke schön", "dankeschön", "vielen Dank"] },
+      { prompt: "Sorry? (you didn't catch it)", answers: ["Wie bitte?"] },
+      { prompt: "the letters (of the alphabet)", answers: ["die Buchstaben"] },
+      { prompt: "the words", answers: ["die Wörter"] }
+    ]}
+  ],
+  listening: {
+    mode: "dictation",
+    instruction: "Listen and write what you hear. Play it as often as you like, slowly too.",
+    items: [
+      { say: "Ja, danke!", answers: ["Ja, danke!"], en: "Yes, thanks!" },
+      { say: "Wie bitte?", answers: ["Wie bitte?"], en: "Sorry?" },
+      { say: "Das ist ein Wort.", answers: ["Das ist ein Wort."], en: "That is a word." },
+      { say: "D, U, B, L, I, N", answers: ["Dublin"], show: "D – U – B – L – I – N: Dublin", en: "", hint: "A spelled word. Write the whole word.", compact: true }
+    ]
+  },
+  pronunciation: {
+    sound: "w",
+    title: "W sounds like English v",
+    intro: "Simple but sneaky: German w is always pronounced like an English v. Your lips don't round at all. Your top teeth rest on your bottom lip.",
+    howTo: [
+      "Say the English word “vine”.",
+      "Keep exactly that v and say <i>Wein</i> (wine).",
+      "Now <i>wie</i> (how): it sounds like the English letter V."
+    ],
+    examples: [
+      { de: "das Wort", en: "word" },
+      { de: "wie", en: "how" },
+      { de: "das Wasser", en: "water" },
+      { de: "der Wein", en: "wine" },
+      { de: "Wie bitte?", en: "Sorry?" }
+    ],
+    pairsLabel: "Hear the difference: w sounds like v, v sounds like f",
+    pairs: [["wir", "vier"], ["Wein", "fein"]],
+    tip: "<b>Irish tip:</b> you already know this from names like Niamh (NEEV): mh makes a v sound. German w is that same v.",
+    twister: { de: "Wir Wiener Waschweiber würden weiße Wäsche waschen, wenn wir wüssten, wo warmes, weiches Wasser wär.", en: "We Viennese washerwomen would wash white laundry if we knew where there was warm, soft water." }
+  },
+  falseFriend: "also"
+},
+
+/* ------------------------------------------------------------------ 2 */
+{
+  id: "l2", n: 2,
+  title: "Hallo & Tschüss",
+  en: "Greetings and introducing yourself",
+  intro: "Time to say hello, give your name and say where you're from. By the end of this lesson you can manage your first little conversation.",
+  vocab: [
+    { de: "Hallo!", en: "Hello! / Hi!" },
+    { de: "Guten Morgen!", en: "Good morning!" },
+    { de: "Guten Tag!", en: "Hello! (a bit formal, daytime)" },
+    { de: "Guten Abend!", en: "Good evening!" },
+    { de: "Tschüss!", en: "Bye!", alt: ["Tschüs!"] },
+    { de: "Auf Wiedersehen!", en: "Goodbye! (formal)" },
+    { de: "heißen", en: "to be called" },
+    { de: "kommen (aus)", say: "kommen", en: "to come (from)", alt: ["kommen", "kommen aus"] },
+    { de: "wohnen (in)", say: "wohnen", en: "to live (in a place)", alt: ["wohnen", "wohnen in"] },
+    { de: "Herr", art: "der", pl: "die Herren", en: "Mr; gentleman" },
+    { de: "Frau", art: "die", pl: "die Frauen", en: "Mrs / Ms; woman" },
+    { de: "Land", art: "das", pl: "die Länder", en: "country" }
+  ],
+  grammar: {
+    title: "du or Sie: two ways to say “you”",
+    html: `<p>German has two words for <i>you</i> when you talk to one person.</p>
+<p><b>du</b> is informal: for friends, family, children, and people your age in relaxed places like a hostel, a pub, a football team or online.</p>
+<p><b>Sie</b> is formal: for adults you don't know, in shops and offices, and with a boss or a teacher. <i>Sie</i> always has a capital S.</p>
+<p>The verb changes with it: <i>du</i> takes <b>-st</b>, <i>Sie</i> takes <b>-en</b>. Not sure? Start with <i>Sie</i>. If the other person prefers <i>du</i>, they'll tell you: <i>Wir können uns duzen.</i> (We can say du to each other.)</p>`,
+    table: {
+      head: ["", "heißen", "kommen", "wohnen"],
+      rows: [["ich", "heiße", "komme", "wohne"], ["du", "heißt", "kommst", "wohnst"], ["Sie", "heißen", "kommen", "wohnen"]],
+      gloss: ["I", "you (informal)", "you (formal)"],
+      sayCols: [1, 2, 3], prefixRow: true
+    },
+    examples: [
+      { de: "Wie heißt du? Ich heiße Liam.", en: "What's your name? My name is Liam." },
+      { de: "Wie heißen Sie? Ich heiße Anna Weber.", en: "What's your name? (formal) My name is Anna Weber." },
+      { de: "Woher kommst du? Ich komme aus Irland.", en: "Where are you from? I'm from Ireland." },
+      { de: "Wo wohnen Sie? Ich wohne in Galway.", en: "Where do you live? (formal) I live in Galway." }
+    ],
+    tip: `<b>Watch out:</b> <i>wo?</i> means where, <i>woher?</i> means where from, and <i>wer?</i> means who, not where.`
+  },
+  exercises: [
+    { type: "mc", instruction: "du or Sie? Pick the right one.", items: [
+      { q: "You meet your friend's little brother. He's eight.", options: ["du", "Sie"], answer: 0 },
+      { q: "You ask a police officer for directions.", options: ["du", "Sie"], answer: 1 },
+      { q: "Someone your age in a hostel says: „Hi, ich bin Tom!“", options: ["du", "Sie"], answer: 0 },
+      { q: "You write an email to a hotel.", options: ["du", "Sie"], answer: 1 }
+    ]},
+    { type: "gap", instruction: "Fill in the gap.", items: [
+      { text: "Wie ___ du? Ich heiße Ciara.", answers: ["heißt"], en: "What's your name? My name is Ciara." },
+      { text: "Woher ___ Sie? Aus Irland.", answers: ["kommen"], en: "Where are you from? From Ireland." },
+      { text: "Ich ___ in Galway.", answers: ["wohne"], en: "I live in Galway." },
+      { text: "Wo ___ du?", answers: ["wohnst"], en: "Where do you live?" },
+      { text: "Guten ___! (It's 8 a.m.)", answers: ["Morgen"], en: "Good morning!" }
+    ]},
+    { type: "match", instruction: "Match them up.", pairs: [
+      ["Tschüss!", "Bye!"], ["Auf Wiedersehen!", "Goodbye! (formal)"], ["Guten Abend!", "Good evening!"],
+      ["das Land", "the country"], ["die Frau", "Mrs; the woman"], ["der Herr", "Mr; the gentleman"]
+    ]},
+    { type: "mc", instruction: "Choose the best answer.", items: [
+      { q: "Woher kommen Sie?", options: ["Ich wohne in Dublin.", "Ich komme aus Irland.", "Ich heiße Irland."], answer: 1 },
+      { q: "Wie heißt du?", options: ["Ich heiße Conor.", "Ich komme aus Conor.", "Guten Morgen, Conor!"], answer: 0 },
+      { q: "Wo wohnst du?", options: ["In Cork.", "Aus Cork.", "Tschüss, Cork!"], answer: 0, explain: "wo? (where) takes in; woher? (where from) takes aus." }
+    ]},
+    { type: "translate", instruction: "Write it in German.", items: [
+      { prompt: "My name is Orla.", answers: ["Ich heiße Orla.", "Mein Name ist Orla.", "Ich bin Orla."] },
+      { prompt: "I come from Ireland.", answers: ["Ich komme aus Irland."] },
+      { prompt: "Where do you live? (informal)", answers: ["Wo wohnst du?"] },
+      { prompt: "Goodbye, Mrs Weber!", answers: ["Auf Wiedersehen, Frau Weber!"] }
+    ]}
+  ],
+  listening: {
+    mode: "dialog",
+    instruction: "Anna and Liam meet at a conference in Cologne (Köln). Listen first, then answer.",
+    lines: [
+      { who: "A", name: "Anna", de: "Guten Tag! Ich heiße Anna Weber. Wie heißen Sie?", en: "Hello! My name is Anna Weber. What's your name?" },
+      { who: "B", name: "Liam", de: "Guten Tag, Frau Weber. Ich heiße Liam Kelly.", en: "Hello, Ms Weber. My name is Liam Kelly." },
+      { who: "A", name: "Anna", de: "Woher kommen Sie, Herr Kelly?", en: "Where are you from, Mr Kelly?" },
+      { who: "B", name: "Liam", de: "Ich komme aus Irland, aus Cork. Und Sie?", en: "I'm from Ireland, from Cork. And you?" },
+      { who: "A", name: "Anna", de: "Ich komme aus Deutschland. Ich wohne hier in Köln.", en: "I'm from Germany. I live here in Cologne." },
+      { who: "B", name: "Liam", de: "Ah, Köln! Schön!", en: "Ah, Cologne! Nice!" }
+    ],
+    questions: [
+      { q: "Where is Liam from?", options: ["Cologne", "Cork", "Dublin"], answer: 1 },
+      { q: "Where does Anna live?", options: ["Cork", "Berlin", "Cologne"], answer: 2 },
+      { q: "Do they say du or Sie to each other?", options: ["du", "Sie"], answer: 1 }
+    ]
+  },
+  pronunciation: {
+    sound: "ch",
+    title: "Two sounds for ch",
+    intro: "German ch comes in two versions. Which one you use depends on the sound right before it.",
+    howTo: [
+      "After <b>a, o, u, au</b>: the <i>ach</i> sound. Rough, at the back of the throat, like in “loch”.",
+      "After <b>e, i, ä, ö, ü</b> and after consonants: the <i>ich</i> sound. Soft, like a whispered h at the start of “huge”.",
+      "Never say it like k or sh: <i>ich</i> is neither “ick” nor “ish”."
+    ],
+    examples: [
+      { de: "ich", en: "I", note: "ich sound" },
+      { de: "nicht", en: "not", note: "ich sound" },
+      { de: "die Milch", en: "milk", note: "ich sound" },
+      { de: "acht", en: "eight", note: "ach sound" },
+      { de: "das Buch", en: "book", note: "ach sound" },
+      { de: "auch", en: "also, too", note: "ach sound" }
+    ],
+    pairsLabel: "Watch it switch: add an umlaut and ach becomes ich",
+    pairs: [["Buch", "Bücher"], ["Nacht", "Nächte"], ["Koch", "Köche"]],
+    tip: "<b>Irish tip:</b> Irish has both sounds! Broad ch in <i>loch</i> is the ach sound, and slender ch in <i>oíche</i> (night) is very close to the ich sound.",
+    twister: { de: "Ich mache acht Kuchen, doch nicht nachts!", en: "I'm making eight cakes, but not at night!" }
+  },
+  falseFriend: "chef"
+},
+
+/* ------------------------------------------------------------------ 3 */
+{
+  id: "l3", n: 3,
+  title: "Zahlen",
+  en: "Numbers from 0 to 100",
+  intro: "Numbers are everywhere: prices, phone numbers, ages, the bus. German says 21 as “one-and-twenty”, which feels odd at first and then clicks. Tap any number to hear it.",
+  board: "numbers",
+  vocab: [
+    { de: "Zahl", art: "die", pl: "die Zahlen", en: "number (a figure like 7 or 42)", note: "A number that labels something (phone, room, bus) is die Nummer." },
+    { de: "Telefonnummer", art: "die", pl: "die Telefonnummern", en: "phone number" },
+    { de: "Hausnummer", art: "die", pl: "die Hausnummern", en: "house number" },
+    { de: "Adresse", art: "die", pl: "die Adressen", en: "address" },
+    { de: "Jahr", art: "das", pl: "die Jahre", en: "year" },
+    { de: "Euro", art: "der", pl: "die Euros", en: "euro", note: "After a number there's no plural: zehn Euro." },
+    { de: "Cent", art: "der", pl: "die Cents", en: "cent", note: "After a number: fünfzig Cent." },
+    { de: "alt", en: "old" },
+    { de: "Wie viel?", en: "How much?" },
+    { de: "kosten", en: "to cost" },
+    { de: "zählen", en: "to count" }
+  ],
+  grammar: {
+    title: "From 21 to 99, numbers go back to front",
+    html: `<p>From 21 on, German says the <b>ones first</b>, then <i>und</i>, then the tens, all glued together into one word. 21 is <i>einundzwanzig</i>: literally “one-and-twenty”, like the old rhyme “four-and-twenty blackbirds”.</p>
+<p>Three small traps:</p>
+<ul><li><i>eins</i> drops its s when it's glued on: <b>ein</b>undzwanzig.</li>
+<li>30 is <i>dreißig</i>, with ß. All the other tens end in <i>-zig</i>.</li>
+<li>sechs and sieben get shorter: <i>sechzehn</i> and <i>sechzig</i>, <i>siebzehn</i> and <i>siebzig</i>.</li></ul>`,
+    table: {
+      head: ["Number", "In German", "Literally"],
+      rows: [["21", "einundzwanzig", "one-and-twenty"], ["35", "fünfunddreißig", "five-and-thirty"], ["67", "siebenundsechzig", "seven-and-sixty"], ["99", "neunundneunzig", "nine-and-ninety"]],
+      sayCols: [1]
+    },
+    examples: [
+      { de: "Ich bin zweiunddreißig Jahre alt.", en: "I'm 32 years old." },
+      { de: "Das kostet vierundzwanzig Euro.", en: "That costs 24 euros." },
+      { de: "Meine Hausnummer ist siebenundachtzig.", en: "My house number is 87." },
+      { de: "Die Insel Irland hat zweiunddreißig Grafschaften.", en: "The island of Ireland has 32 counties." }
+    ],
+    tip: `<b>On the phone:</b> numbers are read digit by digit or in pairs. Many people say <i>zwo</i> instead of <i>zwei</i>, so it can't be mixed up with <i>drei</i>.`
+  },
+  exercises: [
+    { type: "match", instruction: "These look alike. Match number and word.", pairs: [
+      ["13", "dreizehn"], ["30", "dreißig"], ["16", "sechzehn"], ["60", "sechzig"], ["17", "siebzehn"], ["70", "siebzig"]
+    ]},
+    { type: "translate", instruction: "Write the number as a German word.", items: [
+      { prompt: "21", answers: ["einundzwanzig"] },
+      { prompt: "45", answers: ["fünfundvierzig"] },
+      { prompt: "38", answers: ["achtunddreißig"] },
+      { prompt: "100", answers: ["hundert", "einhundert"] }
+    ]},
+    { type: "mc", instruction: "Which number is it?", items: [
+      { q: "zweiundsiebzig", options: ["27", "72", "22"], answer: 1 },
+      { q: "neunzehn", options: ["9", "19", "90"], answer: 1 },
+      { q: "sechsundfünfzig", options: ["56", "65", "66"], answer: 0 },
+      { q: "dreizehn", options: ["13", "30", "33"], answer: 0 }
+    ]},
+    { type: "gap", instruction: "Fill in the gap.", items: [
+      { text: "Wie ___ kostet das?", answers: ["viel"], en: "How much does that cost?" },
+      { text: "Das kostet zehn ___.", answers: ["Euro"], en: "That costs ten euros.", explain: "After a number: zehn Euro, without -s." },
+      { text: "Ich bin zwanzig ___ alt.", answers: ["Jahre"], en: "I'm twenty years old." },
+      { text: "Meine ___ ist 087 123 4567.", answers: ["Telefonnummer", "Handynummer", "Nummer"], en: "My phone number is 087 123 4567." }
+    ]},
+    { type: "translate", instruction: "Write it in German.", items: [
+      { prompt: "How much does that cost?", answers: ["Wie viel kostet das?"] },
+      { prompt: "I'm 28 years old.", answers: ["Ich bin achtundzwanzig Jahre alt.", "Ich bin 28 Jahre alt.", "Ich bin achtundzwanzig.", "Ich bin 28."] },
+      { prompt: "That costs 15 euros.", answers: ["Das kostet fünfzehn Euro.", "Das kostet 15 Euro."] }
+    ]}
+  ],
+  listening: {
+    mode: "dictation",
+    instruction: "Write the number you hear. Digits are fine!",
+    items: [
+      { say: "dreiundvierzig", answers: ["43", "dreiundvierzig"], show: "dreiundvierzig = 43", compact: true },
+      { say: "siebzehn", answers: ["17", "siebzehn"], show: "siebzehn = 17", compact: true },
+      { say: "achtundneunzig", answers: ["98", "achtundneunzig"], show: "achtundneunzig = 98", compact: true },
+      { say: "Das kostet zwölf Euro fünfzig.", answers: ["12,50", "12,50 Euro", "Das kostet zwölf Euro fünfzig.", "Das kostet 12,50 Euro.", "zwölf Euro fünfzig"], show: "Das kostet zwölf Euro fünfzig. = €12.50", en: "That costs €12.50.", hint: "A price", compact: true },
+      { say: "Meine Nummer ist null acht sieben, vier fünf sechs.", answers: ["087456"], show: "null acht sieben, vier fünf sechs = 087 456", en: "My number is 087 456…", hint: "Just the digits of the phone number", compact: true }
+    ]
+  },
+  pronunciation: {
+    sound: "z",
+    title: "Z sounds like “ts”",
+    intro: "German z is always “ts”, like the end of “cats”, even at the start of a word. So zehn sounds like “tsayn”, never like “zane”.",
+    howTo: [
+      "Say “cats” slowly and hold the ts at the end.",
+      "Put that ts at the front: ts-ehn gives you <i>zehn</i>.",
+      "tz sounds the same: <i>Katze</i> (cat), <i>Platz</i> (square, seat).",
+      "Bonus: in standard German, s before a vowel is a soft English z sound: <i>sieben, sechs, so</i>. The z you know from English is spelt s in German."
+    ],
+    examples: [
+      { de: "zehn", en: "ten" },
+      { de: "zwei", en: "two" },
+      { de: "zwölf", en: "twelve" },
+      { de: "zwanzig", en: "twenty" },
+      { de: "die Zahl", en: "number" },
+      { de: "der Zug", en: "train" }
+    ],
+    pairsLabel: "z (ts) or s (soft z)?",
+    pairs: [["Zoo", "so"], ["zehn", "sehen"]],
+    tip: "<b>Shortcut:</b> you already say “pizza” as “peetsa”. That zz is exactly the German z.",
+    twister: { de: "Zehn zahme Ziegen zogen zehn Zentner Zucker zum Zoo.", en: "Ten tame goats pulled ten hundredweight of sugar to the zoo." }
+  },
+  falseFriend: "bekommen"
+},
+
+/* ------------------------------------------------------------------ 4 */
+{
+  id: "l4", n: 4,
+  title: "der, die, das",
+  en: "Every noun has a gender",
+  intro: "Here's the big one: every German noun is masculine, feminine or neuter, even a table or a cup. The trick is to learn each noun together with its article. In this app der is always blue, die red and das green.",
+  vocab: [
+    { de: "Tisch", art: "der", pl: "die Tische", en: "table" },
+    { de: "Stuhl", art: "der", pl: "die Stühle", en: "chair" },
+    { de: "Schlüssel", art: "der", pl: "die Schlüssel", en: "key" },
+    { de: "Tee", art: "der", pl: "die Tees", en: "tea" },
+    { de: "Tasse", art: "die", pl: "die Tassen", en: "cup" },
+    { de: "Lampe", art: "die", pl: "die Lampen", en: "lamp" },
+    { de: "Tür", art: "die", pl: "die Türen", en: "door" },
+    { de: "Zeitung", art: "die", pl: "die Zeitungen", en: "newspaper" },
+    { de: "Buch", art: "das", pl: "die Bücher", en: "book" },
+    { de: "Fenster", art: "das", pl: "die Fenster", en: "window" },
+    { de: "Haus", art: "das", pl: "die Häuser", en: "house" },
+    { de: "Mädchen", art: "das", pl: "die Mädchen", en: "girl", note: "Neuter! Every word ending in -chen is das." }
+  ],
+  grammar: {
+    title: "Articles: der, die, das and ein, eine",
+    html: `<p>English has one word for <i>the</i>. German has three, depending on the gender of the noun: <span class="gs der">der</span> for masculine, <span class="gs die">die</span> for feminine, <span class="gs das">das</span> for neuter.</p>
+<p>The gender belongs to the <i>word</i>, not the thing. A table isn't male, it's just <i>der Tisch</i>. So learn the article as part of the noun, like a first name and a surname.</p>
+<p>Two pieces of good news. In the plural it's <b>always die</b>: die Tische, die Bücher. And for <i>a/an</i> there are only two forms: <i>ein</i> for der and das words, <i>eine</i> for die words.</p>`,
+    table: {
+      head: ["", '<span class="gs der">der</span>', '<span class="gs die">die</span>', '<span class="gs das">das</span>', "plural"],
+      rows: [["the", "der Tisch", "die Tasse", "das Buch", "die Bücher"], ["a / an", "ein Tisch", "eine Tasse", "ein Buch", "Bücher"]],
+      sayCols: [1, 2, 3, 4]
+    },
+    examples: [
+      { de: "Der Tee ist heiß.", en: "The tea is hot." },
+      { de: "Die Tasse ist aus Irland.", en: "The cup is from Ireland." },
+      { de: "Das Mädchen heißt Emma.", en: "The girl is called Emma." },
+      { de: "Das ist ein Stuhl und das ist eine Lampe.", en: "That's a chair and that's a lamp." }
+    ],
+    tip: `<b>Patterns that help</b> (most of the time): words ending in <i>-ung, -heit, -keit</i> are die, most words ending in <i>-e</i> are die, and <i>-chen</i> and <i>-lein</i> are always das. And <i>Das ist …</i> (that is …) works for every gender: Das ist der Tee. Das ist die Tür.`
+  },
+  exercises: [
+    { type: "mc", instruction: "der, die or das?", items: [
+      { q: "Tisch", options: ["der", "die", "das"], answer: 0 },
+      { q: "Lampe", options: ["der", "die", "das"], answer: 1 },
+      { q: "Buch", options: ["der", "die", "das"], answer: 2 },
+      { q: "Mädchen", options: ["der", "die", "das"], answer: 2, explain: "-chen is always das, even for a girl." },
+      { q: "Zeitung", options: ["der", "die", "das"], answer: 1, explain: "-ung is always die." },
+      { q: "Schlüssel", options: ["der", "die", "das"], answer: 0 }
+    ]},
+    { type: "gap", instruction: "Make it plural.", items: [
+      { text: "ein Buch, zwei ___", answers: ["Bücher"] },
+      { text: "ein Stuhl, zwei ___", answers: ["Stühle"] },
+      { text: "eine Tasse, zwei ___", answers: ["Tassen"] },
+      { text: "ein Fenster, zwei ___", answers: ["Fenster"], explain: "Some plurals don't change at all: das Fenster, die Fenster." },
+      { text: "ein Haus, zwei ___", answers: ["Häuser"] }
+    ]},
+    { type: "gap", instruction: "Fill in der, die or das.", items: [
+      { text: "___ Tee ist heiß.", answers: ["Der"], en: "The tea is hot." },
+      { text: "___ Tür ist offen.", answers: ["Die"], en: "The door is open." },
+      { text: "___ Mädchen kommt aus Dublin.", answers: ["Das"], en: "The girl comes from Dublin." },
+      { text: "___ Bücher sind neu.", answers: ["Die"], en: "The books are new." }
+    ]},
+    { type: "gap", instruction: "ein or eine?", items: [
+      { text: "Das ist ___ Lampe.", answers: ["eine"], en: "That's a lamp." },
+      { text: "Das ist ___ Schlüssel.", answers: ["ein"], en: "That's a key." },
+      { text: "Das ist ___ Haus in Kerry.", answers: ["ein"], en: "That's a house in Kerry." },
+      { text: "Das ist ___ Zeitung aus Cork.", answers: ["eine"], en: "That's a newspaper from Cork." }
+    ]},
+    { type: "match", instruction: "Match them up.", pairs: [
+      ["der Schlüssel", "the key"], ["das Fenster", "the window"], ["die Tür", "the door"], ["der Stuhl", "the chair"], ["die Zeitung", "the newspaper"], ["das Haus", "the house"]
+    ]},
+    { type: "translate", instruction: "Write it in German.", items: [
+      { prompt: "the girl", answers: ["das Mädchen"] },
+      { prompt: "the cups", answers: ["die Tassen"] },
+      { prompt: "a book", answers: ["ein Buch"] },
+      { prompt: "The tea is hot.", answers: ["Der Tee ist heiß."] }
+    ]}
+  ],
+  listening: {
+    mode: "dictation",
+    instruction: "Write what you hear. Listen for the article first: der, die or das?",
+    items: [
+      { say: "Das ist der Schlüssel.", answers: ["Das ist der Schlüssel."], en: "That's the key." },
+      { say: "Die Tasse ist neu.", answers: ["Die Tasse ist neu."], en: "The cup is new." },
+      { say: "Das Mädchen hat ein Buch.", answers: ["Das Mädchen hat ein Buch."], en: "The girl has a book." },
+      { say: "Die Fenster sind groß.", answers: ["Die Fenster sind groß."], en: "The windows are big." }
+    ]
+  },
+  pronunciation: {
+    sound: "ü",
+    title: "The ü sound",
+    intro: "English has no ü, so this one needs a small trick. Once you've found it, you'll hear it everywhere.",
+    howTo: [
+      "Say a long “ee”, as in “see”.",
+      "Keep your tongue exactly where it is.",
+      "Now round your lips tightly, as if you were about to whistle.",
+      "That's ü: your tongue says “ee”, your lips say “oo”."
+    ],
+    examples: [
+      { de: "die Tür", en: "door" },
+      { de: "fünf", en: "five" },
+      { de: "die Stühle", en: "chairs" },
+      { de: "der Schlüssel", en: "key" },
+      { de: "grün", en: "green" },
+      { de: "für", en: "for" }
+    ],
+    pairsLabel: "u or ü? i or ü?",
+    pairs: [["Stuhl", "Stühle"], ["vier", "für"], ["Tier", "Tür"]],
+    tip: "<b>Typing tip:</b> no ü on your keyboard? Write ue. The app accepts Tuer for Tür everywhere.",
+    twister: { de: "Die grüne Tür ist für fünf Schüler.", en: "The green door is for five pupils." }
+  },
+  falseFriend: "gift"
+},
+
+/* ------------------------------------------------------------------ 5 */
+{
+  id: "l5", n: 5,
+  title: "sein & haben",
+  en: "To be and to have",
+  intro: "Two little verbs that you'll use in almost every sentence. You'll also meet the family, and the family dog.",
+  vocab: [
+    { de: "Familie", art: "die", pl: "die Familien", en: "family" },
+    { de: "Mutter", art: "die", pl: "die Mütter", en: "mother" },
+    { de: "Vater", art: "der", pl: "die Väter", en: "father" },
+    { de: "Schwester", art: "die", pl: "die Schwestern", en: "sister" },
+    { de: "Bruder", art: "der", pl: "die Brüder", en: "brother" },
+    { de: "Kind", art: "das", pl: "die Kinder", en: "child" },
+    { de: "Freund", art: "der", pl: "die Freunde", en: "friend (male); boyfriend", cue: "friend (a man) / boyfriend" },
+    { de: "Freundin", art: "die", pl: "die Freundinnen", en: "friend (female); girlfriend", cue: "friend (a woman) / girlfriend" },
+    { de: "Hund", art: "der", pl: "die Hunde", en: "dog" },
+    { de: "Katze", art: "die", pl: "die Katzen", en: "cat" },
+    { de: "müde", en: "tired" },
+    { de: "verheiratet", en: "married" }
+  ],
+  grammar: {
+    title: "sein (to be) and haben (to have)",
+    html: `<p>These are the two most common verbs in German, and both are irregular, so they're worth learning by heart. Say them out loud a few times, like a little chant.</p>
+<p>One difference from English: for hunger and thirst German uses <i>haben</i>. You don't <i>are</i> hungry, you <i>have</i> hunger: <i>Ich habe Hunger. Ich habe Durst.</i></p>
+<p><i>sie</i> can mean she or they, and <i>Sie</i> with a capital is the formal you. The verb shows which one: <i>sie ist</i> is “she is”, <i>sie sind</i> is “they are”.</p>`,
+    table: {
+      head: ["", "sein", "haben"],
+      rows: [["ich", "bin", "habe"], ["du", "bist", "hast"], ["er / sie / es", "ist", "hat"], ["wir", "sind", "haben"], ["ihr", "seid", "habt"], ["sie / Sie", "sind", "haben"]],
+      gloss: ["I", "you", "he / she / it", "we", "you (plural)", "they / you (formal)"],
+      sayCols: [1, 2], prefixRow: true
+    },
+    examples: [
+      { de: "Ich bin Irin und wohne in Kerry.", en: "I'm Irish and I live in Kerry." },
+      { de: "Wir haben eine Katze.", en: "We have a cat." },
+      { de: "Bist du müde? Ja, und ich habe Hunger!", en: "Are you tired? Yes, and I'm hungry!" },
+      { de: "Meine Schwester hat zwei Kinder.", en: "My sister has two children." }
+    ],
+    tip: `<b>Nationality:</b> an Irish woman is <i>Irin</i>, an Irish man is <i>Ire</i>. No article: <i>Ich bin Irin.</i> The same goes for jobs: <i>Ich bin Lehrerin.</i>`
+  },
+  exercises: [
+    { type: "gap", instruction: "Fill in the right form of sein.", items: [
+      { text: "Ich ___ müde.", answers: ["bin"], en: "I'm tired." },
+      { text: "Du ___ sehr nett.", answers: ["bist"], en: "You're very nice." },
+      { text: "Wir ___ aus Irland.", answers: ["sind"], en: "We're from Ireland." },
+      { text: "___ ihr verheiratet?", answers: ["Seid"], en: "Are you two married?" },
+      { text: "Das ___ mein Bruder.", answers: ["ist"], en: "That's my brother." }
+    ]},
+    { type: "gap", instruction: "Fill in the right form of haben.", items: [
+      { text: "Ich ___ eine Schwester.", answers: ["habe"], en: "I have a sister." },
+      { text: "___ du eine Katze?", answers: ["Hast"], en: "Do you have a cat?" },
+      { text: "Sie ___ zwei Kinder.", answers: ["hat"], en: "She has two children." },
+      { text: "Wir ___ Hunger!", answers: ["haben"], en: "We're hungry!" },
+      { text: "Ihr ___ zwei Hunde.", answers: ["habt"], en: "You (all) have two dogs." }
+    ]},
+    { type: "mc", instruction: "sein or haben? Pick the correct sentence.", items: [
+      { q: "I'm hungry.", options: ["Ich bin Hunger.", "Ich habe Hunger."], answer: 1 },
+      { q: "I'm 30.", options: ["Ich bin dreißig.", "Ich habe dreißig Jahre."], answer: 0, explain: "Age works like in English: Ich bin dreißig (Jahre alt)." },
+      { q: "She is married.", options: ["Sie hat verheiratet.", "Sie ist verheiratet."], answer: 1 },
+      { q: "They have a cat.", options: ["Sie sind eine Katze.", "Sie haben eine Katze."], answer: 1, explain: "Sie sind eine Katze would mean “They are a cat.”" }
+    ]},
+    { type: "match", instruction: "Match the family.", pairs: [
+      ["der Vater", "father"], ["die Mutter", "mother"], ["der Bruder", "brother"], ["die Schwester", "sister"], ["das Kind", "child"], ["die Familie", "family"]
+    ]},
+    { type: "translate", instruction: "Write it in German.", items: [
+      { prompt: "I'm tired.", answers: ["Ich bin müde."] },
+      { prompt: "We have a cat.", answers: ["Wir haben eine Katze."] },
+      { prompt: "Are you married? (informal)", answers: ["Bist du verheiratet?"] },
+      { prompt: "My brother has two dogs.", answers: ["Mein Bruder hat zwei Hunde."] }
+    ]}
+  ],
+  listening: {
+    mode: "dialog",
+    instruction: "Emma shows her friend Jonas a photo from home. Listen, then answer the questions.",
+    lines: [
+      { who: "A", name: "Jonas", de: "Hallo Emma! Ist das deine Familie?", en: "Hi Emma! Is that your family?" },
+      { who: "B", name: "Emma", de: "Ja! Das ist meine Mutter, und das ist mein Bruder Conor.", en: "Yes! That's my mother, and that's my brother Conor." },
+      { who: "A", name: "Jonas", de: "Und wer ist das?", en: "And who's that?" },
+      { who: "B", name: "Emma", de: "Das ist meine Schwester. Sie ist verheiratet und hat zwei Kinder.", en: "That's my sister. She's married and has two children." },
+      { who: "A", name: "Jonas", de: "Und der Hund?", en: "And the dog?" },
+      { who: "B", name: "Emma", de: "Das ist Paddy. Er ist schon zwölf Jahre alt!", en: "That's Paddy. He's already twelve years old!" }
+    ],
+    questions: [
+      { q: "Who is Conor?", options: ["Emma's brother", "Emma's father", "the dog"], answer: 0 },
+      { q: "How many children does Emma's sister have?", options: ["one", "two", "twelve"], answer: 1 },
+      { q: "How old is Paddy the dog?", options: ["2", "10", "12"], answer: 2 }
+    ]
+  },
+  pronunciation: {
+    sound: "r",
+    title: "The German r",
+    intro: "Irish English says every r clearly, at the front of the mouth. German does two different things instead, and neither of them is the Irish r.",
+    howTo: [
+      "At the start of a word or after a consonant, the r comes from the back of the throat, like a very light gargle: <i>rot, drei, Brot</i>.",
+      "At the end of a word, r almost disappears into a soft “uh”: <i>Vater</i> sounds like “FAH-tuh”, <i>der</i> like “day-uh”.",
+      "Endings in -er are the classic case: <i>Mutter, Schwester, Bruder</i>. Don't curl your tongue."
+    ],
+    examples: [
+      { de: "rot", en: "red", note: "throat r" },
+      { de: "drei", en: "three", note: "throat r" },
+      { de: "das Brot", en: "bread", note: "throat r" },
+      { de: "der Vater", en: "father", note: "soft end" },
+      { de: "die Mutter", en: "mother", note: "soft end" },
+      { de: "hier", en: "here", note: "soft end" }
+    ],
+    pairsLabel: "Start r or end r?",
+    pairs: [["rot", "Tor"], ["drei", "der"]],
+    tip: "<b>Irish tip:</b> the final r is the quickest giveaway of an Irish accent in German. Let it melt away in words like <i>Vater, hier, vier</i> and you'll instantly sound more German.",
+    twister: { de: "Blaukraut bleibt Blaukraut und Brautkleid bleibt Brautkleid.", en: "Red cabbage stays red cabbage and a wedding dress stays a wedding dress." }
+  },
+  falseFriend: "handy"
+},
+
+/* ------------------------------------------------ planned lessons 6–15 */
+{ id: "l6",  n: 6,  soon: true, title: "Verben im Präsens", en: "Everyday verbs in the present", plannedSound: "ö" },
+{ id: "l7",  n: 7,  soon: true, title: "Satzbau", en: "Word order: the verb comes second" },
+{ id: "l8",  n: 8,  soon: true, title: "Fragen", en: "Asking questions" },
+{ id: "l9",  n: 9,  soon: true, title: "Essen & Trinken", en: "Food and drink", plannedSound: "final b, d, g (Auslautverhärtung)" },
+{ id: "l10", n: 10, soon: true, title: "Uhrzeit & Alltag", en: "Telling the time and your day" },
+{ id: "l11", n: 11, soon: true, title: "nicht & kein", en: "Saying no" },
+{ id: "l12", n: 12, soon: true, title: "Akkusativ", en: "The accusative: den, einen" },
+{ id: "l13", n: 13, soon: true, title: "Modalverben", en: "can, must, want" },
+{ id: "l14", n: 14, soon: true, title: "Trennbare Verben", en: "Separable verbs" },
+{ id: "l15", n: 15, soon: true, title: "Das Perfekt", en: "Talking about the past" }
+];
+
+/* False friends: words that look English but aren't.
+   `lesson` links an entry to the lesson where it first shows up. */
+const FALSE_FRIENDS = [
+  { id: "also", de: "also", means: "so, well, therefore", trap: "The English “also” is auch in German.", ex: ["Also, wie heißt du?", "So, what's your name?"], lesson: "l1" },
+  { id: "chef", de: "der Chef", means: "the boss", trap: "A chef who cooks is der Koch or die Köchin.", ex: ["Mein Chef kommt aus Irland.", "My boss is from Ireland."], lesson: "l2" },
+  { id: "bekommen", de: "bekommen", means: "to get, to receive", trap: "“To become” is werden. Ich bekomme ein Kind means “I'm having a baby”, not “I'm becoming a child”!", ex: ["Ich bekomme zehn Euro.", "I get ten euros."], lesson: "l3" },
+  { id: "gift", de: "das Gift", means: "poison", trap: "A gift is das Geschenk.", ex: ["Das ist ein Geschenk aus Irland, kein Gift!", "That's a present from Ireland, not poison!"], lesson: "l4" },
+  { id: "handy", de: "das Handy", means: "mobile phone", trap: "“Handy” in the sense of useful is praktisch.", ex: ["Mein Handy ist alt, aber praktisch.", "My mobile is old, but handy."], lesson: "l5" },
+  { id: "wer", de: "wer?", means: "who?", trap: "“Where?” is wo?", ex: ["Wer ist das?", "Who is that?"] },
+  { id: "will", de: "ich will", means: "I want", trap: "“I will” is ich werde.", ex: ["Ich will Tee!", "I want tea!"] },
+  { id: "bald", de: "bald", means: "soon", trap: "Bald (no hair) is kahl, or eine Glatze haben.", ex: ["Bis bald!", "See you soon!"] },
+  { id: "fast", de: "fast", means: "almost", trap: "Fast (quick) is schnell.", ex: ["Es ist fast acht.", "It's almost eight."] },
+  { id: "kind", de: "das Kind", means: "child", trap: "Kind (nice) is nett or freundlich.", ex: ["Das Kind ist nett.", "The child is kind."] },
+  { id: "rock", de: "der Rock", means: "skirt", trap: "A rock is der Stein or der Felsen; rock music is die Rockmusik.", ex: ["Der Rock ist grün.", "The skirt is green."] },
+  { id: "hose", de: "die Hose", means: "trousers", trap: "A garden hose is der Schlauch.", ex: ["Die Hose ist neu.", "The trousers are new."] },
+  { id: "mist", de: "der Mist", means: "rubbish, nonsense (literally manure); Mist! means Damn!", trap: "Irish mist is der Nebel, and drizzle is der Nieselregen.", ex: ["Mist! Der Bus ist weg.", "Damn! The bus is gone."] },
+  { id: "gymnasium", de: "das Gymnasium", means: "academic secondary school", trap: "A gym is das Fitnessstudio.", ex: ["Meine Schwester geht aufs Gymnasium.", "My sister goes to secondary school."] },
+  { id: "eventuell", de: "eventuell", means: "possibly, maybe", trap: "“Eventually” is schließlich or irgendwann.", ex: ["Ich komme eventuell später.", "I might come later."] },
+  { id: "aktuell", de: "aktuell", means: "current, up to date", trap: "“Actually” is eigentlich.", ex: ["Das ist die aktuelle Zeitung.", "That's the current newspaper."] },
+  { id: "sensibel", de: "sensibel", means: "sensitive", trap: "“Sensible” is vernünftig.", ex: ["Er ist sehr sensibel.", "He's very sensitive."] }
+];
+
+/* Alphabet board: [letter, rough English sound, text for the speaker] */
+const ALPHABET = [
+  ["A","ah"],["B","bay"],["C","tsay"],["D","day"],["E","ay"],["F","eff"],["G","gay"],["H","hah"],["I","ee"],["J","yot"],
+  ["K","kah"],["L","ell"],["M","emm"],["N","enn"],["O","oh"],["P","pay"],["Q","koo"],["R","err"],["S","ess"],["T","tay"],
+  ["U","oo"],["V","fow"],["W","vay"],["X","iks"],["Y","üpsilon","Ypsilon"],["Z","tset"],
+  ["Ä","eh"],["Ö","round-lip eh"],["Ü","round-lip ee"],["ß","ess-tset","Eszett"]
+];
+'use strict';
+/* =====================================================================
+   CORE: helpers, answer checking, storage, sync, audio, speech input
+   ===================================================================== */
+const $ = (s, el = document) => el.querySelector(s);
+const $$ = (s, el = document) => [...el.querySelectorAll(s)];
+const esc = s => String(s == null ? '' : s).replace(/[&<>"']/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
+const plain = s => String(s).replace(/\*/g, '');
+const fmtDe = s => esc(s).replace(/\*([^*]+)\*/g, '<mark class="noun">$1</mark>');
+function shuffle(a) { a = [...a]; for (let i = a.length - 1; i > 0; i--) { const j = Math.floor(Math.random() * (i + 1)); [a[i], a[j]] = [a[j], a[i]]; } return a; }
+const pickOne = a => a[Math.floor(Math.random() * a.length)];
+const DAY = 86400000;
+
+const LESSON = id => LESSONS.find(l => l.id === id);
+const AVAILABLE = () => LESSONS.filter(l => !l.soon);
+const FF = Object.fromEntries(FALSE_FRIENDS.map(f => [f.id, f]));
+const STEPS = [
+  { key: 'words', label: 'Words', short: 'Words' }, { key: 'grammar', label: 'Grammar', short: 'Grammar' },
+  { key: 'practice', label: 'Practice', short: 'Practice' }, { key: 'listen', label: 'Listening', short: 'Listen' },
+  { key: 'sound', label: 'Sound', short: 'Sound' }
+];
+const STEP_LABEL = Object.fromEntries(STEPS.map(s => [s.key, s.label]));
+
+/* ---------- Numbers ---------- */
+const ONES = ['null', 'eins', 'zwei', 'drei', 'vier', 'fünf', 'sechs', 'sieben', 'acht', 'neun', 'zehn', 'elf', 'zwölf', 'dreizehn', 'vierzehn', 'fünfzehn', 'sechzehn', 'siebzehn', 'achtzehn', 'neunzehn'];
+const TENS = ['', '', 'zwanzig', 'dreißig', 'vierzig', 'fünfzig', 'sechzig', 'siebzig', 'achtzig', 'neunzig'];
+function numWord(n) {
+  if (n < 20) return ONES[n];
+  if (n === 100) return 'hundert';
+  const t = Math.floor(n / 10), u = n % 10;
+  return u ? (u === 1 ? 'ein' : ONES[u]) + 'und' + TENS[t] : TENS[t];
+}
+
+/* ---------- Tolerant checking ----------
+   Case, punctuation, quotes, accents and ae/oe/ue/ss vs ä/ö/ü/ß
+   never count as mistakes. */
+function norm(s) {
+  return String(s == null ? '' : s).toLowerCase()
+    .replace(/ä/g, 'ae').replace(/ö/g, 'oe').replace(/ü/g, 'ue').replace(/ß/g, 'ss')
+    .normalize('NFD').replace(/[\u0300-\u036f]/g, '')
+    .replace(/[„“”‚‘’'"«»€]/g, '')
+    .replace(/[.,!?;:()\/\u2013\u2014-]/g, ' ')
+    .replace(/\s+/g, ' ').trim();
+}
+function lev(a, b) {
+  if (a === b) return 0;
+  const m = a.length, n = b.length;
+  if (!m) return n; if (!n) return m;
+  let prev = Array.from({ length: n + 1 }, (_, j) => j), cur = new Array(n + 1);
+  for (let i = 1; i <= m; i++) {
+    cur[0] = i;
+    for (let j = 1; j <= n; j++) cur[j] = Math.min(prev[j] + 1, cur[j - 1] + 1, prev[j - 1] + (a[i - 1] === b[j - 1] ? 0 : 1));
+    [prev, cur] = [cur, prev];
+  }
+  return prev[n];
+}
+/* returns 'ok' | 'almost' | 'bad' | 'empty' */
+function grade(input, answers, compact = false) {
+  const f = compact ? x => norm(x).replace(/ /g, '') : norm;
+  const u = f(input);
+  if (!u) return 'empty';
+  if (answers.some(a => f(a) === u)) return 'ok';
+  if (answers.some(a => { const t = f(a); return t.length >= 4 && lev(t, u) <= (t.length > 14 ? 2 : 1); })) return 'almost';
+  return 'bad';
+}
+
+/* ---------- Storage ---------- */
+const STORE_KEY = 'grand-danke-v1';
+function freshState() {
+  return { v: 1, name: '', updatedAt: 0, lastVisit: 0, lessons: {}, cards: {}, settings: { voice: '', rate: 0.95 } };
+}
+function normalizeState(o) {
+  const s = Object.assign(freshState(), o || {});
+  s.settings = Object.assign(freshState().settings, (o && o.settings) || {});
+  s.lessons = s.lessons || {}; s.cards = s.cards || {};
+  return s;
+}
+function loadState() {
+  try { const raw = localStorage.getItem(STORE_KEY); if (raw) return normalizeState(JSON.parse(raw)); } catch (e) { /* storage blocked */ }
+  return freshState();
+}
+let S = loadState();
+function saveLocal() { try { localStorage.setItem(STORE_KEY, JSON.stringify(S)); } catch (e) { /* ignore */ } }
+/* save(): a real progress change (bumps updatedAt, syncs) */
+function save() { S.updatedAt = Date.now(); saveLocal(); Sync.schedule(); }
+
+/* ---------- Optional sync to the viewer's Claude account ----------
+   Works only when the page is opened signed in with write access;
+   otherwise progress simply stays in this browser. */
+const Sync = {
+  ref: null, status: 'local', busy: false, dirty: false, t: null,
+  async init() {
+    try {
+      if (!window.claude || typeof window.claude.use !== 'function') return;
+      const [db, user] = await Promise.all([window.claude.use('db'), window.claude.use('user')]);
+      if (!db || !user) return;
+      const uid = await user.id();
+      if (!uid) return;
+      const ref = db.doc('data/users/' + uid + '/progress');
+      const snap = await ref.get();
+      this.ref = ref;
+      const remote = snap.exists && snap.data() && snap.data().json ? JSON.parse(snap.data().json) : null;
+      if (remote && (remote.updatedAt || 0) > (S.updatedAt || 0)) {
+        const lastVisit = S.lastVisit;
+        S = normalizeState(remote); S.lastVisit = lastVisit; saveLocal();
+        if (UI.view !== 'lesson' && UI.view !== 'session') route();
+      } else if (S.updatedAt && (!remote || S.updatedAt > (remote.updatedAt || 0))) {
+        await this.push();
+      }
+      if (this.ref) this.status = 'synced';
+      if (UI.view === 'more') route();
+    } catch (e) { this.ref = null; this.status = 'local'; }
+  },
+  schedule() { if (!this.ref) return; clearTimeout(this.t); this.t = setTimeout(() => this.push(), 1500); },
+  async push() {
+    if (!this.ref) return;
+    if (this.busy) { this.dirty = true; return; }
+    this.busy = true;
+    try { await this.ref.set({ json: JSON.stringify(S), updatedAt: S.updatedAt }); this.status = 'synced'; }
+    catch (e) {
+      if (e && e.code === 'unavailable') { this.dirty = true; }
+      else { this.ref = null; this.status = 'local'; }
+    }
+    this.busy = false;
+    if (this.dirty && this.ref) { this.dirty = false; setTimeout(() => this.push(), 2000); }
+  }
+};
+
+/* ---------- Text to speech (Web Speech API, de-DE) ---------- */
+const TTS = {
+  ok: typeof window !== 'undefined' && 'speechSynthesis' in window && typeof SpeechSynthesisUtterance !== 'undefined',
+  voices: [], warned: false, token: null, cur: null,
+  init() {
+    if (!this.ok) return;
+    const load = () => {
+      this.voices = speechSynthesis.getVoices().filter(v => /^de([-_]|$)/i.test(v.lang)).sort((a, b) => this.score(b) - this.score(a));
+      if (UI.view === 'more') refreshVoiceSelect();
+    };
+    load();
+    if (speechSynthesis.addEventListener) speechSynthesis.addEventListener('voiceschanged', load);
+    else speechSynthesis.onvoiceschanged = load;
+  },
+  score(v) {
+    let s = 0; const l = v.lang.replace('_', '-');
+    if (l === 'de-DE') s += 4; else s += 1;
+    if (/google|premium|enhanced|neural|natural|online/i.test(v.name)) s += 3;
+    if (/anna|petra|markus|helena|katja|conrad|hedda|yannick|marlene|vicki/i.test(v.name)) s += 1;
+    return s;
+  },
+  main() {
+    if (S.settings.voice) { const v = this.voices.find(x => x.voiceURI === S.settings.voice); if (v) return v; }
+    return this.voices[0] || null;
+  },
+  second() {
+    const m = this.main(); if (!m) return null;
+    return this.voices.find(v => v !== m && v.lang.replace('_', '-') === m.lang.replace('_', '-')) || null;
+  },
+  utter(text, { slow = false, voice = null, pitch = 1, onend = null } = {}) {
+    const u = new SpeechSynthesisUtterance(plain(text));
+    u.lang = 'de-DE';
+    const v = voice || this.main(); if (v) u.voice = v;
+    u.rate = slow ? 0.6 : (S.settings.rate || 0.95);
+    u.pitch = pitch;
+    if (onend) { u.onend = onend; u.onerror = onend; }
+    this.cur = u; // keep a reference (Chrome drops unreferenced utterances)
+    if (speechSynthesis.paused) speechSynthesis.resume();
+    speechSynthesis.speak(u);
+  },
+  speak(text, opts = {}) {
+    if (!this.ok) { toast('Audio isn’t available in this browser. Chrome or Safari can read German out loud.'); return; }
+    if (!this.voices.length && !this.warned) {
+      this.warned = true;
+      toast('No German voice was found on this device. Add one in your phone’s text-to-speech settings. Using the default voice for now.');
+    }
+    this.token = null; onDialogEnd();
+    if (speechSynthesis.speaking || speechSynthesis.pending) speechSynthesis.cancel();
+    this.utter(text, opts);
+  },
+  stop() { if (!this.ok) return; this.token = null; speechSynthesis.cancel(); onDialogEnd(); },
+  /* plays dialogue lines one after the other, two voices if possible */
+  dialog(lines, { slow = false, onLine, onDone } = {}) {
+    if (!this.ok) { toast('Audio isn’t available in this browser.'); return; }
+    if (speechSynthesis.speaking || speechSynthesis.pending) speechSynthesis.cancel();
+    const token = {}; this.token = token;
+    const vA = this.main(), vB = this.second();
+    let i = 0;
+    const next = () => {
+      if (this.token !== token) return;
+      if (i >= lines.length) { this.token = null; onDone && onDone(); return; }
+      const ln = lines[i]; onLine && onLine(i);
+      const isB = ln.who === 'B';
+      this.utter(ln.de, {
+        slow, voice: isB ? (vB || vA) : vA,
+        pitch: vB ? 1 : (isB ? 0.82 : 1.12),
+        onend: () => { i++; setTimeout(next, 380); }
+      });
+    };
+    next();
+  }
+};
+
+/* ---------- Speech recognition (optional) ---------- */
+const SRClass = typeof window !== 'undefined' ? (window.SpeechRecognition || window.webkitSpeechRecognition) : null;
+const Rec = {
+  ok: !!SRClass, active: null,
+  similar(target, heard) {
+    const t = norm(plain(target));
+    const h = norm(String(heard).replace(/\b\d{1,3}\b/g, m => (+m <= 100 ? numWord(+m) : m)));
+    if (!t || !h) return 0;
+    return 1 - lev(t, h) / Math.max(t.length, h.length);
+  },
+  listen(target, btn) {
+    if (!this.ok) { toast('Speaking practice needs speech recognition, which this browser doesn’t have. Chrome on Android and Safari on iPhone support it.'); return; }
+    if (this.active) { try { this.active.abort(); } catch (e) { } this.active = null; }
+    TTS.stop();
+    let r;
+    try { r = new SRClass(); } catch (e) { toast('Speech recognition couldn’t start here. Try opening the app in its own browser tab.'); return; }
+    r.lang = 'de-DE'; r.interimResults = false; r.maxAlternatives = 4; r.continuous = false;
+    let handled = false;
+    btn && btn.classList.add('rec-on');
+    toast(`<b>Listening…</b> Say: <span lang="de">${esc(plain(target))}</span>`, { sticky: true });
+    r.onresult = e => {
+      handled = true;
+      const alts = [...e.results[0]].map(a => a.transcript);
+      const best = alts.map(a => ({ a, s: this.similar(target, a) })).sort((x, y) => y.s - x.s)[0];
+      const say = sayBtns(target);
+      if (best.s >= 0.9) toast(`<b>Super!</b> That was spot on. ✓`, { kind: 'ok' });
+      else if (best.s >= 0.7) toast(`<b>Close!</b> I heard: “<span lang="de">${esc(best.a)}</span>”. Listen once more and try again.<br>${say}`, { kind: 'almost', sticky: true });
+      else toast(`<b>Not quite yet.</b> I heard: “<span lang="de">${esc(best.a)}</span>”. Listen, then try again.<br>${say}`, { kind: 'bad', sticky: true });
+    };
+    r.onerror = e => {
+      handled = true;
+      const m = {
+        'not-allowed': 'The microphone is blocked. Allow microphone access, or open the app in its own browser tab.',
+        'service-not-allowed': 'The microphone is blocked. Allow microphone access, or open the app in its own browser tab.',
+        'no-speech': 'I didn’t hear anything. Tap the mic and start speaking straight away.',
+        'audio-capture': 'No microphone was found.',
+        'network': 'Speech recognition needs an internet connection.',
+        'aborted': ''
+      }[e.error];
+      if (m === '') hideToast(); else toast(m || 'Speech recognition stopped. Try again.');
+    };
+    r.onend = () => {
+      btn && btn.classList.remove('rec-on');
+      if (this.active === r) this.active = null;
+      if (!handled) toast('I didn’t hear anything. Tap the mic and start speaking straight away.');
+    };
+    try { r.start(); this.active = r; }
+    catch (e) { btn && btn.classList.remove('rec-on'); toast('Speech recognition couldn’t start. Try again in a moment.'); }
+  }
+};
+
+/* ---------- Icons ---------- */
+const svg = p => `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">${p}</svg>`;
+const IC = {
+  speaker: svg('<path d="M11 5 6 9H3v6h3l5 4z"/><path d="M15.5 8.5a5 5 0 0 1 0 7"/><path d="M18.5 5.5a9 9 0 0 1 0 13"/>'),
+  mic: svg('<rect x="9" y="3" width="6" height="11" rx="3"/><path d="M5 11a7 7 0 0 0 14 0"/><path d="M12 18v3"/>'),
+  back: svg('<path d="m15 18-6-6 6-6"/>'),
+  check: svg('<path d="M5 12.5 10 17 19 7"/>'),
+  play: svg('<path d="M7 4.5v15l12-7.5z"/>'),
+  stop: svg('<rect x="6" y="6" width="12" height="12" rx="1.5"/>')
+};
+function sayBtns(text, { mic = false } = {}) {
+  const t = esc(plain(text));
+  return `<span class="say-grp"><button class="say" data-say="${t}" aria-label="Listen">${IC.speaker}</button>`
+    + `<button class="say slow" data-say="${t}" data-slow="1" aria-label="Listen slowly"><span aria-hidden="true">🐢</span></button>`
+    + (mic && Rec.ok ? `<button class="say mic" data-rec="${t}" aria-label="Say it yourself">${IC.mic}</button>` : '')
+    + `</span>`;
+}
+
+/* ---------- Toast ---------- */
+function toast(html, { sticky = false, kind = '' } = {}) {
+  const t = $('#toast');
+  t.innerHTML = `<div class="toast-in ${kind}">${html}<button class="toast-x" aria-label="Close">×</button></div>`;
+  t.classList.add('on');
+  clearTimeout(toast.timer);
+  if (!sticky) toast.timer = setTimeout(hideToast, 5500);
+}
+function hideToast() { const t = $('#toast'); t && t.classList.remove('on'); }
+/* =====================================================================
+   PROGRESS + VIEWS
+   ===================================================================== */
+const UI = { view: 'home', lid: null, step: null, daysAway: 0, backDismissed: false, nameSkipped: false, session: null, rand: 0 };
+const main = () => $('#main');
+
+function lp(id) { return S.lessons[id] || (S.lessons[id] = { steps: {}, last: 'words', done: false }); }
+function stepsDone(id) { const p = S.lessons[id]; return p ? STEPS.filter(s => p.steps[s.key]).length : 0; }
+function isDone(id) { return !!(S.lessons[id] && S.lessons[id].done); }
+function nextLesson() { return AVAILABLE().find(l => !isDone(l.id)) || null; }
+function resumeStep(id) {
+  const p = S.lessons[id];
+  if (!p) return 'words';
+  if (p.last && !p.steps[p.last]) return p.last;
+  const open = STEPS.find(s => !p.steps[s.key]);
+  return open ? open.key : 'words';
+}
+function nextOpenStep(id, cur) {
+  const p = S.lessons[id] || { steps: {} };
+  const i = STEPS.findIndex(s => s.key === cur);
+  const n = [...STEPS.slice(i + 1), ...STEPS.slice(0, i)].find(s => !p.steps[s.key]);
+  return n ? n.key : null;
+}
+function completeStep(id, key) {
+  const p = lp(id);
+  p.steps[key] = true;
+  if (key === 'words') addCards(id);
+  if (!p.done && STEPS.every(s => p.steps[s.key])) { p.done = true; p.doneAt = Date.now(); addCards(id); }
+  save();
+}
+
+/* ---------- Word box (Leitner) ---------- */
+const BOX_DAYS = [0, 0, 1, 3, 7, 14]; // index = box number
+const cardId = (lid, w) => lid + ':' + w.de;
+function addCards(lid) {
+  LESSON(lid).vocab.forEach(w => { const id = cardId(lid, w); if (!S.cards[id]) S.cards[id] = { box: 1, due: 0, r: 0, w: 0 }; });
+}
+function cardWord(id) {
+  const i = id.indexOf(':'); const l = LESSON(id.slice(0, i));
+  return l && l.vocab ? l.vocab.find(w => w.de === id.slice(i + 1)) : null;
+}
+const answerOf = w => (w.art ? w.art + ' ' + w.de : w.de);
+const answersOf = w => [answerOf(w), ...(w.alt || [])];
+const validCards = () => Object.keys(S.cards).filter(id => cardWord(id));
+const dueCount = () => { const now = Date.now(); return validCards().filter(id => S.cards[id].due <= now).length; };
+
+/* ---------- Router ---------- */
+function go(path) { const h = '#/' + path; if (location.hash === h) route(); else location.hash = h; }
+function route() {
+  TTS.stop(); hideToast();
+  const parts = location.hash.replace(/^#\/?/, '').split('/').filter(Boolean);
+  const prevView = UI.view;
+  document.body.classList.remove('no-tabs');
+  if (parts[0] === 'lesson' && parts[1]) { UI.view = 'lesson'; viewLesson(parts[1], parts[2]); }
+  else if (parts[0] === 'cards' && parts[1] === 'session') { UI.view = 'session'; viewSession(prevView !== 'session'); }
+  else if (parts[0] === 'cards') { UI.view = 'cards'; viewCards(); }
+  else if (parts[0] === 'more') { UI.view = 'more'; viewMore(); }
+  else { UI.view = 'home'; viewHome(); }
+  const tab = { home: 'home', cards: 'cards', session: 'cards', more: 'more' }[UI.view];
+  $$('#tabs a').forEach(a => a.classList.toggle('on', a.dataset.tab === tab));
+  window.scrollTo(0, 0);
+}
+
+/* ---------- Home ---------- */
+function viewHome() {
+  const nx = nextLesson();
+  const doneN = AVAILABLE().filter(l => isDone(l.id)).length;
+  const nCards = validCards().length, due = dueCount();
+  let h = `<header><p class="brand">Grand, danke!</p><h1 class="hello" lang="de">Hallo${S.name ? ', ' + esc(S.name) : ''}!</h1>
+    <p class="home-sub">German from zero to A1, one short lesson at a time.</p></header>`;
+
+  if (!S.name && !UI.nameSkipped) {
+    h += `<form class="name-f" id="name-form"><label for="nm">What's your name? Answer in German:</label>
+      <div class="name-row"><span lang="de">Ich heiße</span><input id="nm" class="txt-in" autocomplete="given-name" maxlength="30" enterkeyhint="done"><button class="btn primary">Save</button></div>
+      <button type="button" class="linkish" data-act="skip-name">Maybe later</button></form>`;
+  }
+  if (UI.daysAway >= 4 && Object.keys(S.lessons).length && !UI.backDismissed) {
+    h += `<section class="back-banner"><h2 lang="de">Willkommen zurück!</h2>
+      <p>It's been ${UI.daysAway} days. No problem at all. A quick round of 10 words is the easiest way back in, then carry on where you stopped.</p>
+      <div class="row">${nCards ? `<a class="btn primary" href="#/cards/session">Review 10 words</a>` : ''}<button class="btn quiet" data-act="dismiss-back">Not now</button></div></section>`;
+  }
+  if (nx) {
+    const started = stepsDone(nx.id) > 0 || !!S.lessons[nx.id];
+    const rs = resumeStep(nx.id);
+    h += `<a class="cont" href="#/lesson/${nx.id}/${rs}"><span class="big">${nx.n}</span>
+      <span><h2 lang="de">${esc(nx.title)}</h2><span class="sub">${esc(nx.en)}</span></span>
+      <span class="go">${started ? 'Continue with ' + STEP_LABEL[rs] : (nx.n === 1 ? 'Start the first lesson' : 'Start lesson ' + nx.n)}</span></a>`;
+  } else {
+    h += `<section class="all-done"><h2>All available lessons are done.</h2><p>New lessons are on the way. Until then, a short round in the word box keeps everything fresh.</p><a class="btn primary block" href="#/cards/session">Practise words</a></section>`;
+  }
+  if (!doneN && !nCards) h += `<p class="summary">Each lesson takes 10–15 minutes. Do them whenever it suits you. Your progress is saved, and Continue always takes you to the right place.</p>`;
+  else h += `<p class="summary">You've finished ${doneN} of ${LESSONS.length} lessons and collected ${nCards} words.${due ? ` <a href="#/cards/session">Review ${Math.min(due, 10)} words now</a>` : ''}</p>`;
+
+  h += `<h2>All lessons</h2><ol class="path">${LESSONS.map(pathItem).join('')}</ol>`;
+  main().innerHTML = h;
+}
+function pathItem(l) {
+  if (l.soon) return `<li class="soon"><div class="pi"><span class="node soon">${l.n}</span><span class="pi-t"><b lang="de">${esc(l.title)}</b><span>${esc(l.en)}</span></span><span class="pi-s">Coming soon</span></div></li>`;
+  const n = stepsDone(l.id), d = isDone(l.id), started = !!S.lessons[l.id];
+  const node = d ? `<span class="node done" aria-label="Done">${IC.check}</span>`
+    : started ? `<span class="node prog" style="--p:${Math.max(n * 20, 4)}">${l.n}</span>`
+    : `<span class="node">${l.n}</span>`;
+  const status = d ? 'Done' : started ? `${n} of 5` : '';
+  return `<li><a class="pi" href="#/lesson/${l.id}/${d ? 'words' : resumeStep(l.id)}">${node}<span class="pi-t"><b lang="de">${esc(l.title)}</b><span>${esc(l.en)}</span></span><span class="pi-s">${status}</span></a></li>`;
+}
+
+/* ---------- Lesson ---------- */
+function viewLesson(lid, step) {
+  const l = LESSON(lid);
+  if (!l || l.soon) { go(''); return; }
+  if (step === 'done') { viewDone(l); return; }
+  if (!STEP_LABEL[step]) step = resumeStep(lid);
+  const isNew = !S.lessons[lid];
+  const p = lp(lid);
+  if (isNew || p.last !== step) { p.last = step; save(); }
+  UI.lid = lid; UI.step = step;
+  document.body.classList.add('no-tabs');
+  const nav = STEPS.map(s => `<a href="#/lesson/${lid}/${s.key}" class="${s.key === step ? 'cur' : ''} ${p.steps[s.key] ? 'done' : ''}" ${s.key === step ? 'aria-current="step"' : ''}>${s.short}</a>`).join('');
+  const body = { words: stepWords, grammar: stepGrammar, practice: stepPractice, listen: stepListen, sound: stepSound }[step](l);
+  const nk = nextOpenStep(lid, step);
+  main().innerHTML = `<header class="ltop"><div class="ltop-row"><a class="back" href="#/" aria-label="All lessons">${IC.back}</a>
+      <div class="ltitle"><span class="lnum">${l.n}</span><div><h1 lang="de">${esc(l.title)}</h1><p>${esc(l.en)}</p></div></div></div>
+      <nav class="steps" aria-label="Lesson steps">${nav}</nav></header>
+    <section>${body}</section>
+    <div class="sfoot"><div class="inner"><button class="btn primary block" data-act="next-step">${nk ? 'Continue with ' + STEP_LABEL[nk] : 'Finish lesson'}</button></div></div>`;
+  if (step === 'words' && l.board === 'numbers') newRandomNumber();
+}
+
+function stepWords(l) {
+  let h = `<p class="lead">${esc(l.intro)}</p>`;
+  if (l.board === 'alphabet') h += boardAlphabet();
+  if (l.board === 'numbers') h += boardNumbers();
+  h += `<h2>Words</h2><p class="muted small">Tap a word to hear it, or the turtle to hear it slowly.${Rec.ok ? ' The mic checks your pronunciation.' : ''}</p>`;
+  if (l.vocab.some(w => w.art)) h += `<p class="legend"><span class="g-der">der</span><span class="g-die">die</span><span class="g-das">das</span></p>`;
+  h += `<ul class="words">${l.vocab.map(wordRow).join('')}</ul>`;
+  if (FF[l.falseFriend]) h += ffCard(FF[l.falseFriend]);
+  return h;
+}
+function wordRow(w) {
+  const say = w.say || answerOf(w);
+  return `<li class="word ${w.art ? 'g-' + w.art : ''}"><div class="w-main">
+    <button class="w-de" data-say="${esc(say)}" lang="de">${w.art ? `<span class="art">${w.art}</span> ` : ''}${esc(w.de)}</button>
+    ${w.pl ? `<div><button class="w-pl" data-say="${esc(w.pl)}" lang="de"><i>plural</i>${esc(w.pl)}</button></div>` : ''}
+    <div class="w-en">${esc(w.en)}</div>${w.note ? `<div class="w-note">${esc(w.note)}</div>` : ''}</div>${sayBtns(say, { mic: true })}</li>`;
+}
+function ffCard(f) {
+  return `<article class="ff"><span class="ff-tag">False friend</span>
+    <div class="ff-w"><b lang="de">${esc(f.de)}</b>${sayBtns(f.de)}</div>
+    <p>means <b>${esc(f.means)}</b></p><p class="trap">${esc(f.trap)}</p>
+    <div class="ex"><p lang="de"><b>${esc(f.ex[0])}</b></p><p class="muted small">${esc(f.ex[1])}</p></div></article>`;
+}
+function boardAlphabet() {
+  return `<div class="board">${ALPHABET.map(([L, hint, say], i) => `<button class="tile ${i >= 26 ? 'extra' : ''}" data-say="${esc(say || L)}" aria-label="${esc(L)}, sounds like ${esc(hint)}"><b lang="de">${L}</b><small>${esc(hint)}</small></button>`).join('')}</div>
+    <p class="muted small">26 letters, plus ä, ö, ü and ß. The hints are rough English sounds. ß never starts a word, so you'll almost never see it as a capital.</p>`;
+}
+function boardNumbers() {
+  const nums = [...Array(21).keys(), 30, 40, 50, 60, 70, 80, 90, 100];
+  return `<div class="board nums">${nums.map(n => `<button class="tile" data-say="${numWord(n)}"><b>${n}</b><small lang="de">${numWord(n)}</small></button>`).join('')}</div>
+    <div class="numtry"><p><b>Try it:</b> say this number in German, then check.</p>
+      <div class="row"><span class="numtry-n" id="rn"></span><button class="btn quiet" data-act="rand-hear">${IC.speaker} Hear it</button><button class="btn quiet" data-act="rand-show">Show word</button><button class="btn quiet" data-act="rand-new">New number</button></div>
+      <p class="numtry-w" id="rnw" lang="de" hidden></p></div>`;
+}
+function newRandomNumber() {
+  UI.rand = 21 + Math.floor(Math.random() * 79);
+  const n = $('#rn'), w = $('#rnw');
+  if (n) n.textContent = UI.rand;
+  if (w) { w.textContent = numWord(UI.rand); w.hidden = true; }
+}
+
+function stepGrammar(l) {
+  const g = l.grammar;
+  return `<h2 style="margin-top:0">${esc(g.title)}</h2><div class="prose">${g.html}</div>
+    ${g.table ? tableHtml(g.table) : ''}
+    <h3>Examples</h3><ul class="ex">${g.examples.map(ex => `<li><div><p class="ex-de" lang="de">${fmtDe(ex.de)}</p><p class="ex-en">${esc(ex.en)}</p></div>${sayBtns(ex.de)}</li>`).join('')}</ul>
+    ${g.tip ? `<aside class="tip">${g.tip}</aside>` : ''}`;
+}
+function tableHtml(t) {
+  const sayCols = t.sayCols || [];
+  const rows = t.rows.map((r, ri) => `<tr>${r.map((c, ci) => {
+    if (ci === 0) return `<th scope="row" lang="de">${esc(c)}${t.gloss ? `<small lang="en">${esc(t.gloss[ri])}</small>` : ''}</th>`;
+    if (!sayCols.includes(ci)) return `<td>${esc(c)}</td>`;
+    const pron = t.prefixRow ? r[0].split('/')[0].trim() + ' ' : '';
+    return `<td><button data-say="${esc(pron + c)}" lang="de">${esc(c)}</button></td>`;
+  }).join('')}</tr>`).join('');
+  return `<div class="tbl-wrap"><table><thead><tr>${t.head.map(x => `<th scope="col">${x}</th>`).join('')}</tr></thead><tbody>${rows}</tbody></table></div>
+    ${sayCols.length ? '<p class="muted small">Tap a form in the table to hear it.</p>' : ''}`;
+}
+
+function stepPractice(l) {
+  return `<p class="lead">${l.exercises.length} little tasks. Tap <b>Check</b> whenever you like, or <b>Show answer</b> if you're stuck. No ä, ö, ü, ß on your keyboard? Write ae, oe, ue, ss.</p>`
+    + l.exercises.map((t, i) => taskHtml(t, l.id, 'practice', i)).join('');
+}
+
+function listenTask(l) {
+  const L = l.listening;
+  return L.mode === 'dictation'
+    ? { type: 'dictation', instruction: 'Write what you hear', items: L.items }
+    : { type: 'mc', instruction: 'Answer the questions', items: L.questions };
+}
+function stepListen(l) {
+  const L = l.listening;
+  if (L.mode === 'dictation') return `<p class="lead">${esc(L.instruction)}</p>` + taskHtml(listenTask(l), l.id, 'listen', 0);
+  return `<p class="lead">${esc(L.instruction)}</p>
+    <div class="player"><button class="btn primary" data-act="dlg-play">${IC.play} Play dialogue</button>
+      <button class="btn quiet" data-act="dlg-play" data-slow="1"><span aria-hidden="true">🐢</span> Slowly</button>
+      <button class="btn quiet" data-act="dlg-stop" hidden>${IC.stop} Stop</button></div>
+    ${taskHtml(listenTask(l), l.id, 'listen', 0)}
+    <button class="btn quiet block" data-act="toggle-tr" aria-expanded="false">Show transcript</button>
+    <div class="dlg" hidden>${L.lines.map((ln, i) => `<div class="dl" data-li="${i}"><b class="who who-${ln.who}">${esc(ln.name)}</b><div><p class="de" lang="de">${esc(ln.de)}</p><p class="muted small">${esc(ln.en)}</p></div>${sayBtns(ln.de)}</div>`).join('')}</div>`;
+}
+function onDialogEnd() {
+  $$('.dl.speaking').forEach(d => d.classList.remove('speaking'));
+  const stop = $('[data-act="dlg-stop"]'); if (stop) stop.hidden = true;
+}
+
+function stepSound(l) {
+  const p = l.pronunciation;
+  return `<div class="snd-head"><span class="glyph" lang="de">${esc(p.sound)}</span><h2>${esc(p.title)}</h2></div>
+    <p class="lead">${esc(p.intro)}</p>
+    <ul class="howto">${p.howTo.map(x => `<li>${x}</li>`).join('')}</ul>
+    <h3>Listen and repeat</h3>
+    <ul class="ex">${p.examples.map(ex => `<li><div><p class="ex-de" lang="de">${esc(ex.de)}</p><p class="ex-en">${esc(ex.en)}${ex.note ? ` <span class="snd-note">${esc(ex.note)}</span>` : ''}</p></div>${sayBtns(ex.de, { mic: true })}</li>`).join('')}</ul>
+    ${p.pairs ? `<h3>${esc(p.pairsLabel || 'Hear the difference')}</h3><div class="pairs">${p.pairs.map(([a, b]) => `<div class="pair"><button class="pw" data-say="${esc(a)}" lang="de">${IC.speaker}${esc(a)}</button><span class="muted">or</span><button class="pw" data-say="${esc(b)}" lang="de">${IC.speaker}${esc(b)}</button></div>`).join('')}</div>` : ''}
+    ${p.tip ? `<aside class="tip">${p.tip}</aside>` : ''}
+    <div class="twister"><h3>Tongue twister</h3><p class="tw-de" lang="de">${esc(p.twister.de)}</p><p class="muted">${esc(p.twister.en)}</p>${sayBtns(p.twister.de, { mic: true })}</div>`;
+}
+
+function viewDone(l) {
+  const nx = AVAILABLE().find(x => x.n > l.n && !isDone(x.id)) || nextLesson();
+  main().innerHTML = `<section><p class="done-k" lang="de">Geschafft!</p><h1>Lesson ${l.n} is done.</h1>
+    <p>${l.vocab.length} words from <span lang="de">${esc(l.title)}</span> are now in your word box. They'll come back in short reviews, so they stick.</p>
+    <div class="stack">${nx ? `<a class="btn primary block" href="#/lesson/${nx.id}/${resumeStep(nx.id)}">Go to lesson ${nx.n}: <span lang="de">${esc(nx.title)}</span></a>` : ''}
+      <a class="btn quiet block" href="#/cards/session">Review words</a><a class="btn quiet block" href="#/">All lessons</a></div>
+    <p class="muted small">Taking a break? Everything is saved. Continue brings you straight back.</p></section>`;
+}
+/* =====================================================================
+   TASKS: gap · match · mc · translate · dictation
+   ===================================================================== */
+const MATCH = {}; // per-task state for matching: { order, sel, pairs }
+const umlBar = () => `<div class="uml" role="group" aria-label="Special letters"><span>Type:</span>${['ä', 'ö', 'ü', 'ß'].map(c => `<button type="button" data-ins="${c}" aria-label="Insert ${c}">${c}</button>`).join('')}</div>`;
+const inAttrs = `autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" lang="de" enterkeyhint="next"`;
+
+function taskHtml(task, lid, kind, ti) {
+  const key = `${lid}-${kind}-${ti}`;
+  let body = '';
+  if (task.type === 'gap') body = task.items.map((it, i) => {
+    const [a, b] = it.text.split('___');
+    const w = Math.max(...it.answers.map(x => x.length), 3);
+    return `<label class="gap-line"><span lang="de">${esc(a)}</span><input class="gap-in" data-i="${i}" style="--w:${w}" ${inAttrs} aria-label="Missing word"><span lang="de">${esc(b || '')}</span>`
+      + `${it.en ? `<span class="gap-en">${esc(it.en)}</span>` : ''}${it.explain ? `<span class="explain" hidden>${esc(it.explain)}</span>` : ''}</label>`;
+  }).join('');
+  if (task.type === 'translate') body = task.items.map((it, i) => `<div class="tr-item"><p class="tr-prompt">${esc(it.prompt)}</p>
+      <input class="txt-in" data-i="${i}" ${inAttrs} placeholder="Auf Deutsch …" aria-label="${esc(it.prompt)} in German">
+      <div class="sol" hidden><b lang="de">${esc(it.answers[0])}</b>${sayBtns(it.answers[0])}</div></div>`).join('');
+  if (task.type === 'dictation') body = task.items.map((it, i) => `<div class="dict-item"><div class="dict-top"><span class="dict-n">${i + 1}</span>${sayBtns(it.say)}${it.hint ? `<span class="muted small">${esc(it.hint)}</span>` : ''}</div>
+      <input class="txt-in" data-i="${i}" ${inAttrs} aria-label="What you heard, sentence ${i + 1}">
+      <div class="sol" hidden><span><b lang="de">${esc(it.show || it.say)}</b>${it.en ? `<br><span class="muted small">${esc(it.en)}</span>` : ''}</span></div></div>`).join('');
+  if (task.type === 'mc') body = task.items.map((it, i) => `<div class="mc-item" data-i="${i}"><p class="mc-q">${esc(it.q)}</p>
+      <div class="opts" role="group">${it.options.map((o, j) => `<button type="button" class="opt" data-act="opt" data-o="${j}" aria-pressed="false">${esc(o)}</button>`).join('')}</div>
+      ${it.explain ? `<span class="explain" hidden>${esc(it.explain)}</span>` : ''}</div>`).join('');
+  if (task.type === 'match') body = `<div class="match-wrap">${matchHtml(task, key)}</div>`;
+  const hasText = ['gap', 'translate', 'dictation'].includes(task.type);
+  return `<article class="task" data-lid="${lid}" data-kind="${kind}" data-ti="${ti}">
+    <div class="task-h">${kind === 'practice' ? `<span class="task-n">${ti + 1}</span>` : ''}<h3>${esc(task.instruction)}</h3></div>
+    ${task.type === 'match' ? '<p class="muted small" style="margin-top:0">Tap a German word, then its English partner.</p>' : ''}
+    ${body}${hasText ? umlBar() : ''}
+    <p class="task-fb" aria-live="polite"></p>
+    <div class="task-act"><button type="button" class="btn primary" data-act="check">Check</button><button type="button" class="btn quiet" data-act="show">Show answer</button></div></article>`;
+}
+function taskOf(el) {
+  const l = LESSON(el.dataset.lid);
+  return el.dataset.kind === 'listen' ? listenTask(l) : l.exercises[+el.dataset.ti];
+}
+function taskKey(el) { return `${el.dataset.lid}-${el.dataset.kind}-${el.dataset.ti}`; }
+
+/* Match */
+function matchState(task, key) {
+  return MATCH[key] || (MATCH[key] = { order: shuffle(task.pairs.map((_, i) => i)), sel: null, pairs: {}, marks: null });
+}
+function matchHtml(task, key) {
+  const st = matchState(task, key);
+  const rightOwner = {}; Object.entries(st.pairs).forEach(([l, r]) => { rightOwner[r] = +l; });
+  const cls = (side, i, owner) => {
+    const c = ['mi'];
+    if (side === 'L' && st.sel === i) c.push('sel');
+    if (owner != null) { c.push('paired'); if (st.marks) c.push(st.marks[owner] ? 'ok' : 'bad'); }
+    return c.join(' ');
+  };
+  const left = task.pairs.map((p, i) => {
+    const paired = st.pairs[i] != null;
+    return `<button type="button" class="${cls('L', i, paired ? i : null)}" style="--pc:var(--m${i % 6})" data-act="mleft" data-i="${i}" lang="de" aria-pressed="${st.sel === i}">${esc(p[0])}${paired ? `<span class="pb">${i + 1}</span>` : ''}</button>`;
+  }).join('');
+  const right = st.order.map(r => {
+    const owner = rightOwner[r];
+    return `<button type="button" class="${cls('R', r, owner)}" ${owner != null ? `style="--pc:var(--m${owner % 6})"` : ''} data-act="mright" data-r="${r}">${esc(task.pairs[r][1])}${owner != null ? `<span class="pb">${owner + 1}</span>` : ''}</button>`;
+  }).join('');
+  return `<div class="match"><div class="col">${left}</div><div class="col">${right}</div></div>`;
+}
+function rerenderMatch(el) { const task = taskOf(el); $('.match-wrap', el).innerHTML = matchHtml(task, taskKey(el)); }
+
+/* Check */
+function setFb(el, cls, text) { const fb = $('.task-fb', el); fb.className = 'task-fb ' + cls; fb.textContent = text; }
+function summarize(el, ok, total, almost, empty) {
+  if (ok === total) { setFb(el, 'ok', pickOne(['Sehr gut! All correct.', 'Perfekt! Everything is right.', 'Super, all correct!', 'Toll gemacht! All right.'])); return; }
+  let t = `${ok} of ${total} correct.`;
+  if (almost) t += ' Orange means almost: check the spelling.';
+  if (empty) t += ` ${empty} still empty.`;
+  if (total - ok - almost - empty > 0) t += ' Have another go at the red ones, or tap Show answer.';
+  setFb(el, almost && ok + almost === total ? 'almost' : 'bad', t);
+}
+function checkTask(el) {
+  const task = taskOf(el);
+  let ok = 0, total = 0, almost = 0, empty = 0;
+  if (['gap', 'translate', 'dictation'].includes(task.type)) {
+    $$('input[data-i]', el).forEach(inp => {
+      const it = task.items[+inp.dataset.i];
+      const g = grade(inp.value, it.answers, !!it.compact);
+      total++;
+      inp.classList.remove('in-ok', 'in-bad', 'in-almost', 'in-shown');
+      if (g === 'ok') { ok++; inp.classList.add('in-ok'); }
+      else if (g === 'almost') { almost++; inp.classList.add('in-almost'); }
+      else if (g === 'empty') empty++;
+      else inp.classList.add('in-bad');
+      const ex = inp.parentElement.querySelector('.explain'); if (ex && g === 'ok') ex.hidden = false;
+    });
+  } else if (task.type === 'mc') {
+    $$('.mc-item', el).forEach((row, i) => {
+      const it = task.items[i]; total++;
+      $$('.opt', row).forEach(o => o.classList.remove('ok', 'bad'));
+      const sel = $('.opt[aria-pressed="true"]', row);
+      if (!sel) { empty++; return; }
+      const right = +sel.dataset.o === it.answer;
+      sel.classList.add(right ? 'ok' : 'bad');
+      if (right) { ok++; const ex = $('.explain', row); if (ex) ex.hidden = false; }
+    });
+  } else if (task.type === 'match') {
+    const st = matchState(task, taskKey(el));
+    total = task.pairs.length;
+    const paired = Object.keys(st.pairs).length;
+    if (paired < total) { setFb(el, 'info', `Match all pairs first: ${total - paired} to go.`); return; }
+    st.marks = {}; task.pairs.forEach((_, i) => { st.marks[i] = st.pairs[i] === i; if (st.marks[i]) ok++; });
+    rerenderMatch(el);
+  }
+  summarize(el, ok, total, almost, empty);
+}
+function showTask(el) {
+  const task = taskOf(el);
+  if (task.type === 'gap') {
+    $$('input[data-i]', el).forEach(inp => {
+      const it = task.items[+inp.dataset.i];
+      if (grade(inp.value, it.answers) !== 'ok') { inp.value = it.answers[0]; inp.classList.remove('in-ok', 'in-bad', 'in-almost'); inp.classList.add('in-shown'); }
+      const ex = inp.parentElement.querySelector('.explain'); if (ex) ex.hidden = false;
+    });
+  } else if (task.type === 'translate' || task.type === 'dictation') {
+    $$('.sol', el).forEach(s => { s.hidden = false; });
+  } else if (task.type === 'mc') {
+    $$('.mc-item', el).forEach((row, i) => {
+      const it = task.items[i];
+      $$('.opt', row).forEach(o => { o.classList.remove('ok', 'bad'); if (+o.dataset.o === it.answer) { o.classList.add('ok'); o.setAttribute('aria-pressed', 'true'); } else o.setAttribute('aria-pressed', 'false'); });
+      const ex = $('.explain', row); if (ex) ex.hidden = false;
+    });
+  } else if (task.type === 'match') {
+    const st = matchState(task, taskKey(el));
+    st.sel = null; st.pairs = {}; st.marks = {};
+    task.pairs.forEach((_, i) => { st.pairs[i] = i; st.marks[i] = true; });
+    rerenderMatch(el);
+  }
+  setFb(el, 'info', task.type === 'dictation' ? 'Here is what was said. Play it again and read along.' : 'Here are the answers. Say each one out loud once.');
+}
+
+/* =====================================================================
+   WORD BOX
+   ===================================================================== */
+function viewCards() {
+  const ids = validCards();
+  if (!ids.length) {
+    const nx = nextLesson();
+    main().innerHTML = `<h1>Word box</h1><p class="lead">Your word box is empty. Words land here as soon as you finish the Words step of a lesson.</p>
+      ${nx ? `<a class="btn primary block" href="#/lesson/${nx.id}/${resumeStep(nx.id)}">Open lesson ${nx.n}</a>` : ''}`;
+    return;
+  }
+  const counts = [1, 2, 3, 4, 5].map(b => ids.filter(id => S.cards[id].box === b).length);
+  const max = Math.max(...counts, 1);
+  const due = dueCount();
+  const labs = ['every round', 'after 1 day', 'after 3 days', 'after 1 week', 'after 2 weeks'];
+  main().innerHTML = `<h1>Word box</h1>
+    <p class="lead">Every word starts in box 1. Get it right and it moves up a box and rests longer. Get it wrong and it goes back to box 1, so tricky words come up more often.</p>
+    <div class="boxes" aria-hidden="true">${counts.map(c => `<div class="bx"><b>${c}</b><span class="bar" style="height:${Math.round(c / max * 100)}%"></span></div>`).join('')}</div>
+    <div class="bx-labs">${labs.map((t, i) => `<span><b>Box ${i + 1}</b>${t}</span>`).join('')}</div>
+    <p style="margin-top:1.25rem">${due ? `${due} of your ${ids.length} words are ready for review.` : `All ${ids.length} words are resting. You can still practise the ones in the lowest boxes.`}</p>
+    <a class="btn primary block" href="#/cards/session">${due ? `Practise ${Math.min(due, 10)} words` : 'Practise anyway'}</a>`;
+}
+function buildSession() {
+  const now = Date.now(), ids = validCards();
+  const byBox = arr => shuffle(arr).sort((a, b) => S.cards[a].box - S.cards[b].box);
+  let q = byBox(ids.filter(id => S.cards[id].due <= now)).slice(0, 10);
+  if (q.length < 10) q = q.concat(byBox(ids.filter(id => !q.includes(id))).slice(0, 10 - q.length));
+  return { queue: q, i: 0, state: 'ask', first: {}, seen: new Set(), requeued: new Set(), result: null, input: '' };
+}
+function gradeCard(w, input) {
+  const g = grade(input, answersOf(w));
+  if (g === 'ok' || g === 'empty') return g;
+  if (w.art) {
+    if (grade(input, [w.de]) === 'ok') return 'noart';
+    if (['der', 'die', 'das'].some(a => a !== w.art && grade(input, [a + ' ' + w.de]) === 'ok')) return 'wrongart';
+  }
+  return g;
+}
+function moveCard(id, result, repeat) {
+  const c = S.cards[id]; const now = Date.now();
+  if (repeat) return;
+  if (result === 'up') { c.box = Math.min(5, c.box + 1); c.r++; c.due = now + BOX_DAYS[c.box] * DAY; }
+  else if (result === 'down') { c.box = 1; c.w++; c.due = now; }
+  else { c.due = now; }
+  save();
+}
+function viewSession(fresh) {
+  document.body.classList.add('no-tabs');
+  if (fresh || !UI.session) UI.session = buildSession();
+  const s = UI.session;
+  if (!s.queue.length) { go('cards'); return; }
+  if (s.i >= s.queue.length) { sessionSummary(); return; }
+  const id = s.queue[s.i], w = cardWord(id), c = S.cards[id];
+  const pct = Math.round(s.i / s.queue.length * 100);
+  let inner = `<p class="fc-meta">Box ${c.box}</p><p class="fc-prompt">${esc(w.cue || w.en)}</p>
+    <p class="fc-hint">${w.art ? 'A noun: include der, die or das.' : 'Write it in German.'}</p>`;
+  const ans = `<div class="fc-ans"><b lang="de">${w.art ? `<span class="g-${w.art}"><span class="art">${w.art}</span></span> ` : ''}${esc(w.de)}</b>${sayBtns(w.say || answerOf(w))}</div>${w.pl ? `<p class="muted small" lang="de">plural: ${esc(w.pl)}</p>` : ''}`;
+  if (s.state === 'ask') {
+    inner += `<input id="card-in" class="txt-in" ${inAttrs} enterkeyhint="done" placeholder="Auf Deutsch …" aria-label="Your answer in German" value="${esc(s.input)}">${umlBar()}
+      <div class="task-act" style="margin-top:.9rem"><button class="btn primary" data-act="card-check">Check</button><button class="btn quiet" data-act="card-show">Show</button></div>`;
+  } else if (s.state === 'result') {
+    const r = s.result;
+    const msg = {
+      ok: ['ok', 'Richtig! ✓'],
+      noart: ['almost', `The word is right, but it needs its article: ${answerOf(w)}.`],
+      wrongart: ['bad', `Right word, wrong article. It's ${w.art}.`],
+      almost: ['almost', 'So close. Just a small spelling slip.'],
+      bad: ['bad', 'Not this time. Here it is:']
+    }[r];
+    inner += `<p class="muted small">You wrote: <span lang="de">${esc(s.input)}</span></p>${ans}<p class="fc-fb ${msg[0]}">${esc(msg[1])}</p>
+      <div class="task-act" style="margin-top:.9rem"><button class="btn primary" data-act="card-next" id="card-next">Next</button></div>`;
+  } else if (s.state === 'reveal') {
+    inner += `${ans}<p class="fc-fb">Did you know it?</p>
+      <div class="task-act" style="margin-top:.6rem"><button class="btn primary" data-act="card-rate" data-knew="1">Yes, I knew it</button><button class="btn quiet" data-act="card-rate" data-knew="0">Not yet</button></div>`;
+  }
+  main().innerHTML = `<div class="sess-top"><a class="back" href="#/cards" aria-label="End session">${IC.back}</a><div class="sess-bar"><i style="width:${pct}%"></i></div><span class="small muted">${s.i + 1} / ${s.queue.length}</span></div>
+    <div class="fcard">${inner}</div>`;
+  if (s.state === 'ask') { const inp = $('#card-in'); if (inp && window.matchMedia('(hover: hover)').matches) inp.focus(); }
+  if (s.state === 'result') { const b = $('#card-next'); b && b.focus({ preventScroll: true }); }
+}
+function sessionAnswer(outcome) {
+  const s = UI.session, id = s.queue[s.i];
+  const repeat = s.seen.has(id);
+  if (!repeat) s.first[id] = outcome === 'up';
+  s.seen.add(id);
+  moveCard(id, outcome, repeat);
+  if (outcome !== 'up' && !s.requeued.has(id)) { s.requeued.add(id); s.queue.push(id); }
+}
+function sessionSummary() {
+  const s = UI.session;
+  const uniq = Object.keys(s.first).length, right = Object.values(s.first).filter(Boolean).length;
+  main().innerHTML = `<p class="done-k" lang="de">Fertig!</p><h1>${right} of ${uniq} right first time.</h1>
+    <p>${right === uniq ? 'Every word moved up a box. Wunderbar!' : 'The words you missed are back in box 1 and will come up again soon. That’s how they stick.'}</p>
+    <div class="stack"><button class="btn primary block" data-act="card-again">Another round</button><a class="btn quiet block" href="#/cards">Word box</a><a class="btn quiet block" href="#/">Lessons</a></div>`;
+}
+
+/* =====================================================================
+   MORE: false friends + settings
+   ===================================================================== */
+function viewMore() {
+  const voices = TTS.voices;
+  main().innerHTML = `<h1>More</h1>
+    <h2>False friends</h2><p class="lead">German words that look English but mean something else. Great for a laugh, bad in a shop.</p>
+    <div class="ffs">${FALSE_FRIENDS.map(f => ffCard(f).replace('</article>', f.lesson ? `<p class="ff-src">Comes up in lesson ${LESSON(f.lesson).n}</p></article>` : '</article>')).join('')}</div>
+    <h2>Settings</h2>
+    <div class="set"><label for="set-name">Your name</label><input id="set-name" class="txt-in" value="${esc(S.name)}" maxlength="30" autocomplete="given-name"></div>
+    <div class="set"><label for="voice">German voice</label>
+      <select id="voice" class="txt-in">${voices.length ? voices.map(v => `<option value="${esc(v.voiceURI)}" ${TTS.main() === v ? 'selected' : ''}>${esc(v.name)} (${esc(v.lang)})</option>`).join('') : '<option value="">No German voice found</option>'}</select>
+      <p class="muted small">${voices.length ? 'Voices differ a lot between devices. Try a few and keep the clearest.' : 'Add a German voice in your phone’s text-to-speech settings, then reopen the app.'}</p>
+      <label for="rate" style="margin-top:.75rem">Normal speed: <span id="rate-v">${Math.round((S.settings.rate || .95) * 100)}%</span></label>
+      <input id="rate" type="range" min="0.7" max="1.1" step="0.05" value="${S.settings.rate || .95}">
+      <button class="btn quiet" data-act="voice-test" style="margin-top:.5rem">${IC.speaker} Test voice</button></div>
+    <div class="set"><label>Speaking practice</label><p class="muted small" style="margin:0">${Rec.ok ? 'Available. Tap a mic button and say the word. Recognition isn’t perfect, especially for single words, so trust your ears too.' : 'Not available in this browser. Chrome on Android and Safari on iPhone support it.'}</p></div>
+    <div class="set"><label>Your progress</label><p class="muted small" style="margin:0 0 .6rem">${Sync.status === 'synced' ? 'Saved on this device and synced to your Claude account.' : 'Saved in this browser on this device.'}</p>
+      <button class="btn quiet danger" data-act="reset">Reset all progress</button></div>
+    <div class="set"><label>How it works</label><p class="muted small" style="margin:0">Each lesson has five short steps and takes 10 to 15 minutes. Lessons build on each other, but you can open any of them at any time. There's no schedule: Continue always jumps to your next open step, however long the break.</p></div>`;
+}
+function refreshVoiceSelect() { if (UI.view === 'more') viewMore(); }
+
+/* =====================================================================
+   EVENTS
+   ===================================================================== */
+let lastInput = null, insHandled = false;
+function insertChar(ch) {
+  const inp = lastInput && document.body.contains(lastInput) ? lastInput : null;
+  if (!inp) { toast('Tap into an answer field first, then add the letter.'); return; }
+  const a = inp.selectionStart ?? inp.value.length, b = inp.selectionEnd ?? inp.value.length;
+  inp.value = inp.value.slice(0, a) + ch + inp.value.slice(b);
+  inp.focus();
+  try { inp.setSelectionRange(a + ch.length, a + ch.length); } catch (e) { }
+  inp.dispatchEvent(new Event('input', { bubbles: true }));
+}
+
+const ACTIONS = {
+  'next-step'() {
+    const lid = UI.lid, step = UI.step;
+    completeStep(lid, step);
+    const nk = nextOpenStep(lid, step);
+    go(`lesson/${lid}/${nk || 'done'}`);
+  },
+  check(t) { checkTask(t.closest('.task')); },
+  show(t) { showTask(t.closest('.task')); },
+  opt(t) {
+    const row = t.closest('.mc-item');
+    $$('.opt', row).forEach(o => { o.setAttribute('aria-pressed', String(o === t)); o.classList.remove('ok', 'bad'); });
+  },
+  mleft(t) {
+    const el = t.closest('.task'), task = taskOf(el), st = matchState(task, taskKey(el)), i = +t.dataset.i;
+    st.marks = null;
+    if (st.pairs[i] != null) { delete st.pairs[i]; st.sel = i; }
+    else st.sel = st.sel === i ? null : i;
+    rerenderMatch(el);
+  },
+  mright(t) {
+    const el = t.closest('.task'), task = taskOf(el), st = matchState(task, taskKey(el)), r = +t.dataset.r;
+    st.marks = null;
+    const owner = Object.keys(st.pairs).find(k => st.pairs[k] === r);
+    if (st.sel != null) { if (owner != null) delete st.pairs[owner]; st.pairs[st.sel] = r; st.sel = null; }
+    else if (owner != null) delete st.pairs[owner];
+    else { const f = $('.task-fb', el); f.className = 'task-fb info'; f.textContent = 'Tap a German word first.'; return; }
+    rerenderMatch(el);
+  },
+  'dlg-play'(t) {
+    const l = LESSON(UI.lid); const stop = $('[data-act="dlg-stop"]');
+    if (stop) stop.hidden = false;
+    TTS.dialog(l.listening.lines, {
+      slow: t.dataset.slow === '1',
+      onLine: i => { $$('.dl').forEach(d => d.classList.toggle('speaking', +d.dataset.li === i)); },
+      onDone: onDialogEnd
+    });
+  },
+  'dlg-stop'() { TTS.stop(); },
+  'toggle-tr'(t) {
+    const d = $('.dlg'); d.hidden = !d.hidden;
+    t.setAttribute('aria-expanded', String(!d.hidden));
+    t.textContent = d.hidden ? 'Show transcript' : 'Hide transcript';
+  },
+  'rand-hear'() { TTS.speak(numWord(UI.rand)); },
+  'rand-show'() { const w = $('#rnw'); if (w) w.hidden = false; TTS.speak(numWord(UI.rand)); },
+  'rand-new'() { newRandomNumber(); },
+  'skip-name'() { UI.nameSkipped = true; route(); },
+  'dismiss-back'() { UI.backDismissed = true; route(); },
+  'card-check'() {
+    const s = UI.session, inp = $('#card-in'); if (!s || !inp) return;
+    const w = cardWord(s.queue[s.i]); const r = gradeCard(w, inp.value);
+    if (r === 'empty') { toast('Type your answer first, or tap Show.'); return; }
+    s.input = inp.value; s.result = r; s.state = 'result';
+    sessionAnswer(r === 'ok' ? 'up' : (r === 'noart' || r === 'almost') ? 'stay' : 'down');
+    viewSession(false);
+    TTS.speak(w.say || answerOf(w));
+  },
+  'card-show'() {
+    const s = UI.session; if (!s) return;
+    s.input = ''; s.state = 'reveal'; viewSession(false);
+    const w = cardWord(s.queue[s.i]); TTS.speak(w.say || answerOf(w));
+  },
+  'card-rate'(t) { sessionAnswer(t.dataset.knew === '1' ? 'up' : 'down'); ACTIONS['card-next'](); },
+  'card-next'() { const s = UI.session; s.i++; s.state = 'ask'; s.input = ''; s.result = null; viewSession(false); window.scrollTo(0, 0); },
+  'card-again'() { UI.session = buildSession(); viewSession(false); },
+  'voice-test'() { TTS.speak('Hallo! Ich bin deine Stimme für Deutsch.'); },
+  reset(t) {
+    if (t.dataset.armed !== '1') { t.dataset.armed = '1'; t.textContent = 'Tap again to delete everything'; setTimeout(() => { if (t.isConnected) { t.dataset.armed = ''; t.textContent = 'Reset all progress'; } }, 4000); return; }
+    const keep = { settings: S.settings, name: S.name };
+    S = freshState(); S.settings = keep.settings; S.name = keep.name; save();
+    Object.keys(MATCH).forEach(k => delete MATCH[k]);
+    toast('All progress has been reset.'); go('');
+  }
+};
+
+/* ä ö ü ß buttons: insert on press so the text field keeps focus (and the phone keyboard stays open) */
+document.addEventListener('pointerdown', e => {
+  const b = e.target.closest('[data-ins]');
+  if (b) { e.preventDefault(); insHandled = true; setTimeout(() => { insHandled = false; }, 600); insertChar(b.dataset.ins); }
+});
+document.addEventListener('mousedown', e => { if (e.target.closest('[data-ins]')) e.preventDefault(); });
+document.addEventListener('click', e => {
+  const t = e.target.closest('[data-say],[data-rec],[data-act],[data-ins],.toast-x');
+  if (!t) return;
+  if (t.matches('.toast-x')) { hideToast(); return; }
+  if (t.dataset.ins) { if (insHandled) insHandled = false; else insertChar(t.dataset.ins); return; }
+  if (t.dataset.say !== undefined) { TTS.speak(t.dataset.say, { slow: t.dataset.slow === '1' }); return; }
+  if (t.dataset.rec !== undefined) { Rec.listen(t.dataset.rec, t); return; }
+  const fn = ACTIONS[t.dataset.act]; if (fn) fn(t, e);
+});
+document.addEventListener('focusin', e => { if (e.target.matches && e.target.matches('input.gap-in, input.txt-in')) lastInput = e.target; });
+document.addEventListener('input', e => {
+  if (e.target.matches && e.target.matches('.gap-in, .task .txt-in')) e.target.classList.remove('in-ok', 'in-bad', 'in-almost', 'in-shown');
+  if (e.target.id === 'card-in' && UI.session) UI.session.input = e.target.value;
+  if (e.target.id === 'rate') { S.settings.rate = +e.target.value; const v = $('#rate-v'); if (v) v.textContent = Math.round(S.settings.rate * 100) + '%'; }
+});
+document.addEventListener('change', e => {
+  if (e.target.id === 'voice' && e.target.value) { S.settings.voice = e.target.value; save(); TTS.speak('Hallo!'); }
+  if (e.target.id === 'rate') { save(); TTS.speak('Das ist die normale Geschwindigkeit.'); }
+  if (e.target.id === 'set-name') { S.name = e.target.value.trim().slice(0, 30); save(); }
+});
+document.addEventListener('keydown', e => {
+  if (e.key !== 'Enter' || !e.target.matches) return;
+  if (e.target.id === 'card-in') { e.preventDefault(); ACTIONS['card-check'](); return; }
+  if (!e.target.matches('.task input')) return;
+  e.preventDefault();
+  const task = e.target.closest('.task'), inputs = $$('input[data-i]', task), i = inputs.indexOf(e.target);
+  if (i < inputs.length - 1) inputs[i + 1].focus(); else checkTask(task);
+});
+document.addEventListener('submit', e => {
+  if (e.target.id !== 'name-form') return;
+  e.preventDefault();
+  const v = $('#nm').value.trim().slice(0, 30);
+  if (!v) { toast('Type your name after „Ich heiße“.'); return; }
+  S.name = v; save(); route();
+  toast(`<span lang="de"><b>Hallo, ${esc(v)}! Freut mich.</b></span> (Nice to meet you.)`, { kind: 'ok' });
+  TTS.speak(`Hallo ${v}! Freut mich.`);
+});
+window.addEventListener('hashchange', route);
+
+/* =====================================================================
+   START
+   ===================================================================== */
+(function start() {
+  const now = Date.now();
+  UI.daysAway = S.lastVisit ? Math.floor((now - S.lastVisit) / DAY) : 0;
+  S.lastVisit = now; saveLocal(); // a visit alone isn't a progress change
+  TTS.init();
+  route();
+  Sync.init();
+})();
+</script>
+</body>
+</html>
